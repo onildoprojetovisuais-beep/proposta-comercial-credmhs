@@ -17,3 +17,6 @@ entregas/
 # Configuração local do Claude Code
 .claude/settings.local.json
 tsconfig.tsbuildinfo
+.vercel
+
+.vercel
