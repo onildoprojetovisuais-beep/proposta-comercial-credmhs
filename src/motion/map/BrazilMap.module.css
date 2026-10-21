@@ -1,0 +1,104 @@
+/* Mapa da seção Alcance — desenhado para o fundo amarelo (--cred-yellow). Só tokens existentes. */
+
+.root {
+  width: 100%;
+  min-width: 0;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  container-type: inline-size;
+}
+
+.player {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Rótulo do Rio: HTML sobre o mapa. Ancorado pela altura do RJ (top inline, em %),
+   abaixo do anel (margem em % da largura = unidades do viewBox / 10) e encostado à direita,
+   sobre o oceano — cabe sem cortar de 320 px em diante. */
+.label {
+  position: absolute;
+  right: 0;
+  /* Abaixo do anel e da costa de SP/RJ, sobre o oceano, para caber numa linha. */
+  margin: 11.5cqi 0 0;
+  font-family: var(--font-brand);
+  font-weight: 700;
+  font-size: clamp(14px, 2.5cqi, 16px);
+  line-height: 1.25;
+  letter-spacing: 0;
+  color: var(--cred-ink);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Mapa estreito: o rótulo ocupa mais largura relativa; desce até o oceano ao sul do RJ
+   para não encostar na costa de SP/RJ (medido em 320 px). */
+@container (max-width: 480px) {
+  .label {
+    margin-top: 15cqi;
+  }
+}
+
+.labelOn {
+  opacity: 1;
+  transform: none;
+}
+
+/* Mapa estreito: “Rio de Janeiro -” / “Barra e Centro” (quebra depois do hífen). */
+@container (max-width: 480px) {
+  .labelPart {
+    display: block;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 8px;
+}
+
+.control {
+  appearance: none;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 8px;
+  border: 0;
+  background: none;
+  font-family: var(--font-brand);
+  font-size: 1rem; /* 16 px */
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--cred-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.control:hover {
+  text-decoration-thickness: 2px;
+}
+
+.control:focus-visible {
+  outline: 2px solid var(--cred-ink);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .label {
+    transition: none;
+    transform: none;
+  }
+}

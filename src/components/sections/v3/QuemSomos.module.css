@@ -1,0 +1,367 @@
+/* Quem somos (slide 3) — rodada 21/10: leveza. Sem traços decorativos, sem indicadores, sem
+   moldura no título; fotos das unidades preservadas; atributos em círculos. */
+.section {
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+  overflow: clip;
+}
+
+/* ---------- 1. Título ---------- */
+.head {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+  gap: var(--space-3);
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.intro {
+  font-size: var(--fs-lead);
+  line-height: 1.4;
+  color: var(--gray-500);
+  max-width: 34ch;
+}
+
+/* Título sem moldura: a presença vem só da escala. */
+.title {
+  font-size: min(calc(var(--fs-mega) * 1.5), 13cqi);
+  font-weight: var(--fw-bold);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- 2. História + unidades ---------- */
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.row + .row {
+  margin-top: clamp(3rem, 7vw, 6rem);
+}
+
+.story {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  gap: var(--space-5);
+}
+
+.headline {
+  /* Escala pela coluna: o trecho final inseparável sempre cabe. */
+  font-size: min(var(--fs-h1), 8.4cqi);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  max-width: 22ch;
+  text-wrap: balance;
+}
+
+.history {
+  font-size: var(--fs-lead);
+  line-height: 1.55;
+  max-width: 40ch;
+}
+
+/* Unidade: foto retangular com moldura amarela deslocada, foto de apoio e etiqueta de tinta. */
+.unit {
+  position: relative;
+  padding-bottom: clamp(3rem, 9vw, 5rem);
+}
+
+.unitFrame {
+  margin-right: var(--frame-offset);
+}
+
+.unit[data-side='left'] .unitFrame {
+  --frame-dx: calc(-1 * var(--frame-offset));
+  margin-right: 0;
+  margin-left: var(--frame-offset);
+}
+
+.unitMain {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.unitMain[data-shape='tall'] {
+  aspect-ratio: 4 / 5;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.unitDetail {
+  position: absolute;
+  bottom: 0;
+  left: calc(-1 * var(--space-4));
+  width: 38%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 6px solid var(--cred-white);
+  background: var(--cred-white);
+}
+
+.unit[data-side='left'] .unitDetail {
+  left: auto;
+  right: calc(-1 * var(--space-4));
+}
+
+.unitTag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  padding: var(--space-3) var(--space-5) var(--space-4);
+  background: var(--cred-ink);
+  color: var(--cred-white);
+}
+
+.unit[data-side='left'] .unitTag {
+  left: auto;
+  right: 0;
+}
+
+.unitLabel {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--cred-yellow);
+}
+
+.unitName {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+/* Três atributos em círculos amarelos translúcidos sobrepostos (Venn leve). Sem contorno, sem
+   painel, sem ícones. O quadrado do <ul> define a geometria; o texto escala pela largura. */
+ul.attributes {
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  max-width: 38rem;
+  justify-self: center;
+  align-self: center;
+  aspect-ratio: 1.12 / 1;
+}
+
+.attribute {
+  position: absolute;
+  display: grid;
+  width: 54%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--cred-yellow) 72%, transparent);
+  color: var(--cred-ink);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+
+/* Posições: topo ao centro, base à esquerda, base à direita. Cada texto fica centralizado no seu
+   círculo: o centro de cada círculo está fora dos outros dois (distância entre centros > raio). */
+.attribute[data-pos='0'] {
+  top: 0;
+  left: 23%;
+}
+
+.attribute[data-pos='1'] {
+  bottom: 0;
+  left: 0;
+}
+
+.attribute[data-pos='2'] {
+  bottom: 0;
+  right: 0;
+}
+
+.attribute[data-pos] {
+  place-items: center;
+  padding: 0;
+}
+
+.attributeText {
+  /* Uma palavra por linha: “Atuação / nacional”, “Experiência / multissetorial”, “100% / digital”. */
+  width: min-content;
+  font-size: 5.6cqi;
+  font-weight: var(--fw-bold);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+@media (min-width: 1024px) {
+  .row {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    align-items: center;
+    column-gap: var(--space-8);
+  }
+
+  .rowReverse {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  }
+
+  .unitMain[data-shape='tall'] {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* ---------- Celular (< 1024): grade e margens consistentes ---------- */
+@media (max-width: 1023px) {
+  .row {
+    gap: var(--space-7);
+    margin-bottom: var(--space-7);
+  }
+
+  .unit {
+    padding-bottom: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  /* Foto de apoio dentro da margem, nos dois lados. */
+  .unitDetail {
+    left: 0;
+    width: 40%;
+    border-width: 4px;
+  }
+
+  .unit[data-side='left'] .unitDetail {
+    right: 0;
+  }
+
+  .unitMain[data-shape='tall'] {
+    aspect-ratio: 1 / 1;
+  }
+
+  .unitTag {
+    padding: var(--space-2) var(--space-4) var(--space-3);
+  }
+}
+
+/* ---------- Celular (< 768): padrões compactos ---------- */
+.compactRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-7);
+}
+
+/* Unidades: trilho deslizável; a unidade seguinte aparece na borda (convite ao deslize). */
+.unitsCarousel {
+  display: grid;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.chips {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.chip {
+  min-height: var(--tap-min);
+  padding: 0 var(--space-5);
+  border: 2px solid var(--cred-ink);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--cred-ink);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    background-color 180ms var(--ease-out),
+    color 180ms var(--ease-out);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--cred-ink);
+  color: var(--cred-yellow);
+}
+
+.unitsTrack {
+  display: flex;
+  gap: var(--space-4);
+  margin-right: calc(-1 * var(--gutter));
+  padding-right: var(--gutter);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.unitsTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.unitSlide {
+  flex: 0 0 88%;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.unitSlide .unit {
+  padding-bottom: var(--space-7);
+}
+
+.unitSlide .unitMain,
+.unitSlide .unitMain[data-shape='tall'] {
+  aspect-ratio: 4 / 3;
+}
+
+.unitSlide .unitName {
+  font-size: var(--fs-h4);
+}
+
+.unitSlide .unitLabel {
+  font-size: 1rem;
+}
+
+
+/* Celular: os três círculos numa corrente vertical em zigue-zague (cada um encosta no anterior). */
+@media (max-width: 767px) {
+  ul.attributes {
+    aspect-ratio: auto;
+    max-width: 26rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .attribute,
+  .attribute[data-pos] {
+    position: relative;
+    inset: auto;
+    width: 66%;
+    place-items: center;
+    padding: 0;
+  }
+
+  .attribute + .attribute {
+    margin-top: -22%;
+  }
+
+  .attribute[data-pos='1'] {
+    justify-self: end;
+  }
+
+  .attribute[data-pos='0'],
+  .attribute[data-pos='2'] {
+    justify-self: start;
+  }
+
+  .attributeText,
+  .attribute[data-pos] .attributeText {
+    font-size: 7.4cqi;
+    text-align: center;
+  }
+}

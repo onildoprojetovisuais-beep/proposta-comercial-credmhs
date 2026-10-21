@@ -1,0 +1,147 @@
+/* Sete frentes (slide 9) — rodada 21/10, leveza: espaço no lugar de linhas, faixas e caixas.
+   Grade de leitura: número | título | texto (desktop); empilhado no celular. */
+.section {
+  overflow: clip;
+}
+
+.head {
+  container-type: inline-size;
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.title {
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  /* “uma atuação única.” fica inteiro numa linha: escala pela largura do cabeçalho. */
+  font-size: min(var(--fs-display), 7.6cqi);
+}
+
+/* Celular: caixa alta mantida; o corpo escala para “uma atuação única.” caber numa linha. */
+@media (max-width: 599px) {
+  .title {
+    font-size: min(var(--fs-display), 9.2cqi);
+    line-height: 1.05;
+  }
+}
+
+.list {
+  display: grid;
+  row-gap: clamp(1.75rem, 1.1rem + 2vw, 2.75rem);
+}
+
+.front {
+  display: grid;
+  /* Celular: número como índice discreto acima do título; texto em largura total. */
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'number'
+    'title'
+    'text';
+  row-gap: var(--space-2);
+  align-items: baseline;
+}
+
+/* Número leve: corpo de subtítulo, peso regular, tinta suavizada. Marca a ordem sem gritar. */
+.number {
+  grid-area: number;
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-regular);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  font-variant-numeric: lining-nums tabular-nums;
+  color: color-mix(in srgb, var(--cred-ink) 55%, transparent);
+}
+
+.frontTitle {
+  grid-area: title;
+  margin: 0;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  max-width: 24ch;
+  text-wrap: balance;
+}
+
+.frontText {
+  grid-area: text;
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  max-width: 50ch;
+  text-wrap: pretty;
+}
+
+@media (max-width: 767px) {
+  .number {
+    font-size: var(--fs-body);
+    margin-bottom: calc(-1 * var(--space-1));
+  }
+}
+
+@media (min-width: 768px) {
+  .front {
+    grid-template-columns: 4rem minmax(0, 1fr);
+    grid-template-areas:
+      'number title'
+      '. text';
+    column-gap: var(--space-4);
+  }
+}
+
+@media (min-width: 1100px) {
+  .front {
+    grid-template-columns: 5rem minmax(0, 5fr) minmax(0, 6fr);
+    grid-template-areas: 'number title text';
+    column-gap: var(--space-6);
+  }
+
+  .frontTitle {
+    padding-right: var(--space-5);
+  }
+}
+
+/* Fecho “Comunicação e reputação”: texto flutuante, alinhado à coluna dos títulos.
+   Sem caixa e sem número; o amarelo aparece só como marca-texto sob o título. */
+.closing {
+  margin-top: clamp(3.5rem, 2rem + 5vw, 6.5rem);
+  max-width: 46rem;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.closingTitle {
+  margin: 0;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.closingMark {
+  background: linear-gradient(transparent 58%, var(--cred-yellow) 58%, var(--cred-yellow) 92%, transparent 92%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding-inline: 0.08em;
+}
+
+.closingText {
+  margin: 0;
+  font-size: var(--fs-lead);
+  line-height: 1.55;
+  max-width: 46ch;
+  text-wrap: pretty;
+}
+
+@media (min-width: 768px) {
+  .closing {
+    margin-left: calc(4rem + var(--space-4));
+  }
+}
+
+@media (min-width: 1100px) {
+  .closing {
+    margin-left: calc(5rem + var(--space-6));
+  }
+}
+

@@ -1,0 +1,251 @@
+.section {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-7);
+  align-content: start;
+  padding-block: var(--space-7) var(--space-9);
+}
+
+/* ---------- Coluna editorial ---------- */
+.intro {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-content: start;
+  gap: var(--header-gap);
+  --sun-width: 5.5rem;
+  /* Reserva a altura do meio sol (largura / 2) abaixo do texto. */
+  padding-bottom: calc(var(--sun-width) / 2 + var(--space-4));
+}
+
+/* Sol do símbolo sobre a linha de base. */
+.sun {
+  position: absolute;
+  z-index: -1;
+  /* Meio sol apoiado na linha de base, à direita (mesmo padrão do editor). */
+  right: 0;
+  bottom: 3px;
+  width: var(--sun-width);
+  aspect-ratio: 2 / 1;
+  border-radius: 999px 999px 0 0;
+  background: var(--cred-yellow);
+}
+
+.intro::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: -50vw;
+  bottom: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--cred-ink);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--gray-800);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 2rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--cred-yellow);
+}
+
+.title {
+  max-width: 13ch;
+}
+
+.lead {
+  color: var(--gray-800);
+}
+
+.lead p + p {
+  margin-top: var(--space-3);
+}
+
+.aside {
+  max-width: 40ch;
+  padding-top: var(--space-3);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+/* ---------- Folha de ação ---------- */
+.sheet {
+  display: grid;
+  gap: var(--space-5);
+  align-content: start;
+  width: 100%;
+  max-width: 34rem;
+}
+
+.sheetTitle {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-heading);
+}
+
+.sheetText {
+  max-width: var(--measure);
+  color: var(--gray-800);
+}
+
+.form {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+}
+
+.note {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+.fieldError {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  color: var(--cred-aux-magenta); /* auxiliar do brandbook (6,6:1 sobre branco); o erro também tem texto e "!" */
+}
+
+.fieldError::before {
+  content: '! ';
+}
+
+/* ---------- Senha com mostrar/ocultar ---------- */
+.passwordWrap {
+  position: relative;
+}
+
+.passwordWrap :global(.field) {
+  padding-right: 6.5rem;
+}
+
+.reveal {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+  min-height: var(--tap-min);
+  min-width: var(--tap-min);
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: calc(var(--field-radius) - 4px);
+  background: transparent;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+  text-decoration-color: var(--cred-yellow);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.25em;
+}
+
+.reveal:hover {
+  text-decoration-color: currentColor;
+}
+
+/* ---------- Mensagens ---------- */
+.notice {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--gray-100);
+  box-shadow: inset 4px 0 0 var(--cred-ink);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+
+.notice[data-tone='error'] {
+  background: #fbeef3; /* [derivado] tom claro da auxiliar magenta */
+  box-shadow: inset 4px 0 0 var(--cred-aux-magenta);
+}
+
+.notice[data-tone='success'] {
+  background: var(--paper-strong);
+  box-shadow: inset 6px 0 0 var(--cred-yellow);
+}
+
+.notice strong {
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+/* ---------- Carregando ---------- */
+.loading {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: var(--space-5);
+  padding: var(--space-9) var(--gutter);
+  text-align: center;
+}
+
+.loadingSun {
+  width: 3.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--cred-yellow);
+  animation: pulse 1.4s var(--ease-in-out) infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.82);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loadingSun {
+    animation: none;
+  }
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 32rem);
+    align-items: center;
+    gap: clamp(var(--space-7), 6vw, var(--space-10));
+    min-height: calc(100svh - 73px);
+    padding-block: var(--space-8);
+  }
+
+  .intro {
+    --sun-width: 9rem;
+    padding-bottom: calc(var(--sun-width) / 2 + var(--space-5));
+  }
+
+  /* No desktop a linha de base fica na coluna editorial, sem cruzar a folha. */
+  .intro::after {
+    right: calc(-1 * clamp(var(--space-7), 6vw, var(--space-10)) / 2);
+  }
+
+
+  .sheet {
+    justify-self: end;
+  }
+}

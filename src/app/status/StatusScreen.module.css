@@ -1,0 +1,190 @@
+/* Telas de estado da apresentação pública (carregamento / não encontrada / indisponível / erro).
+   Só tokens existentes; o eixo é o mesmo .container das seções. */
+.page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: var(--header-h) 1fr;
+  background: var(--paper);
+  color: var(--cred-ink);
+  overflow-x: clip;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(30 29 29 / 0.08);
+}
+
+/* Brandbook p. 33: mínimo digital 150px com tagline (igual ao header da apresentação). */
+.logo {
+  display: block;
+  width: 156px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 176px;
+  }
+}
+
+.main {
+  display: grid;
+  align-content: center;
+  padding-block: var(--space-9);
+}
+
+.main:focus,
+.loading:focus,
+.result :focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ---------- Carregamento ---------- */
+/* Discreto: aparece só se a resposta demorar (evita piscar em conexões rápidas). */
+.loading {
+  justify-self: center;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
+  opacity: 0;
+  animation: appear var(--dur-slow) var(--ease-out) 400ms forwards;
+}
+
+.sun {
+  width: 3.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--cred-yellow);
+}
+
+/* Linha de base do símbolo (sol sobre a linha, brandbook p. 54) como indicador de progresso. */
+.line {
+  position: relative;
+  width: 9rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--gray-200);
+  overflow: hidden;
+}
+
+.lineFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 40%;
+  border-radius: 2px;
+  background: var(--cred-ink);
+  animation: travel 1.4s var(--ease-in-out) infinite;
+}
+
+.loadingLabel {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-muted);
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes travel {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+/* Movimento reduzido: sem deslocamento; a linha fica preenchida e estática. */
+@media (prefers-reduced-motion: reduce) {
+  .lineFill {
+    animation: none;
+    width: 100%;
+    transform: none;
+  }
+}
+
+/* ---------- Resultado ---------- */
+.result {
+  position: relative;
+  display: grid;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+/* Foco programático no título (anúncio para leitor de tela) não desenha o anel do teclado. */
+.result h1[tabindex='-1']:focus,
+.result h1[tabindex='-1']:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Sol sobre a linha de base (padrão gráfico, brandbook p. 54), como em M01, sem foto. */
+.resultSun {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: -5.75rem;
+  right: 0;
+  width: 4.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--cred-yellow);
+}
+
+.result > :not(.resultSun) {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .result {
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 24rem);
+    column-gap: var(--space-9);
+    align-items: center;
+  }
+
+  .result > :not(.resultSun) {
+    grid-column: 1;
+  }
+
+  .resultSun {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    top: auto;
+    right: auto;
+    justify-self: end;
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .resultSun::after {
+    content: '';
+    position: absolute;
+    left: -30%;
+    right: 0;
+    bottom: 22%;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--cred-ink);
+    z-index: -1;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+@media (max-width: 479px) {
+  .actions > * {
+    width: 100%;
+  }
+}

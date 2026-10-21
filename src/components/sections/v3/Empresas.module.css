@@ -1,0 +1,213 @@
+/*
+ * Empresas (slide 10) — carrossel leve de marcas. Dono: agente de Marcas.
+ * Base branca, logos em cor original, amarelo #FFCA00 nos detalhes (seta "próximas",
+ * marcador da linha de base), preto como terciário (seta "anteriores", contador).
+ * A linha de base com a barra amarela reta é o indicador de posição do carrossel.
+ * Geometria reta (assets/referencia.jpg): botões com --radius-control (2 px), barra sem raio.
+ */
+
+.carousel {
+  /* Altura-base de um logo de proporção 3:1; cada marca multiplica por --logo-f (Empresas.tsx). */
+  --logo-base: clamp(2.375rem, 1.9rem + 2vw, 3.75rem); /* 38 (390) → 59 (1440) */
+  --per-view: 1.45; /* < 480: a marca seguinte aparece cortada, convidando ao deslize */
+  --slot-h: calc(var(--logo-base) * 2.5);
+  position: relative;
+  min-width: 0;
+}
+
+@media (min-width: 480px) {
+  .carousel {
+    --per-view: 2;
+  }
+}
+
+@media (min-width: 640px) {
+  .carousel {
+    --per-view: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel {
+    --per-view: 4;
+  }
+}
+
+/* ---------- Faixa rolável (nativa) ---------- */
+.track {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* setas + linha de progresso substituem a barra */
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.track:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+  box-shadow: 0 0 0 calc(var(--focus-width) + var(--focus-offset) + 2px) var(--color-focus-ring);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .track {
+    scroll-behavior: smooth;
+  }
+}
+
+.item {
+  flex: 0 0 calc(100% / var(--per-view));
+  display: grid;
+  place-items: center;
+  min-height: var(--slot-h);
+  padding-inline: var(--space-4);
+  scroll-snap-align: start;
+}
+
+.logo {
+  display: block;
+  /* Peso óptico: a altura varia por marca; largura acompanha a proporção. */
+  height: calc(var(--logo-base) * var(--logo-f, 1));
+  width: auto;
+  max-width: 82%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ---------- Controles: linha de base, contador, setas ---------- */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+/* Sem rolagem (tudo cabe): esconde contador e setas, mantém só a linha de base. */
+.controls[data-scrollable='false'] .counter,
+.controls[data-scrollable='false'] .arrows {
+  display: none;
+}
+
+.rail {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 4px;
+}
+
+.rail::before {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: var(--gray-200);
+}
+
+.thumb {
+  position: absolute;
+  top: 0;
+  left: calc(var(--thumb-offset, 0) * 100%);
+  width: calc(var(--thumb-size, 1) * 100%);
+  height: 4px;
+  border-radius: 0;
+  background: var(--cred-yellow);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .thumb {
+    transition: left 120ms linear;
+  }
+}
+
+.counter {
+  flex: none;
+  margin: 0;
+  min-width: 3.5ch;
+  font-family: var(--font-brand);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: var(--cred-ink);
+  text-align: right;
+}
+
+.arrows {
+  flex: none;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  min-width: var(--tap-min);
+  min-height: var(--tap-min);
+  padding: 0;
+  border: 2px solid var(--cred-ink);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--cred-ink);
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    opacity var(--dur-fast) var(--ease-out);
+}
+
+.next {
+  border-color: var(--cred-yellow);
+  background: var(--cred-yellow);
+}
+
+.arrow:not([aria-disabled='true']):hover {
+  border-color: var(--cred-ink);
+  background: var(--cred-ink);
+  color: var(--cred-yellow);
+}
+
+.arrow svg {
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .prev:not([aria-disabled='true']):hover svg {
+    transform: translateX(-2px);
+  }
+
+  .next:not([aria-disabled='true']):hover svg {
+    transform: translateX(2px);
+  }
+}
+
+/* Pontas: continua focável (aria-disabled), mas visivelmente inativa. */
+.arrow[aria-disabled='true'] {
+  border-color: var(--surface-gray);
+  background: var(--surface-gray);
+  color: var(--gray-400);
+  cursor: default;
+}
+
+@media (max-width: 479px) {
+  .controls {
+    gap: var(--space-4);
+  }
+
+  .item {
+    padding-inline: var(--space-3);
+  }
+}
+

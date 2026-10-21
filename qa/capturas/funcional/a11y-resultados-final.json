@@ -1,0 +1,1054 @@
+{
+ "kbd_1440": [
+  {
+   "tag": "A",
+   "name": "Pular para o conteúdo",
+   "sec": "header",
+   "w": 229,
+   "h": 54,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "CRED MHS — início da apresentação",
+   "sec": "header",
+   "w": 176,
+   "h": 53,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Sua pauta (0)",
+   "sec": "header",
+   "w": 136,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conteúdo , capítulo atual: 01 Apresentação",
+   "sec": "header",
+   "w": 270,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Conhecer a CRED",
+   "sec": "header",
+   "w": 291,
+   "h": 66,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "01 Saúde Ocupacional",
+   "sec": "header",
+   "w": 632,
+   "h": 77,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "02 Segurança do Trabalho",
+   "sec": "header",
+   "w": 632,
+   "h": 77,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "03 Gestão e Tecnologia",
+   "sec": "header",
+   "w": 632,
+   "h": 77,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "04 Treinamentos",
+   "sec": "header",
+   "w": 632,
+   "h": 77,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Personalizar com o nome da empresa",
+   "sec": "header",
+   "w": 345,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Continuar",
+   "sec": "header",
+   "w": 176,
+   "h": 53,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conhecer a atuação completa",
+   "sec": "header",
+   "w": 246,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conhecer a estrutura",
+   "sec": "header",
+   "w": 267,
+   "h": 53,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Ver outras empresas",
+   "sec": "header",
+   "w": 263,
+   "h": 53,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "01 Saúde Ocupacional",
+   "sec": "header",
+   "w": 427,
+   "h": 96,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "02 Segurança do Trabalho",
+   "sec": "header",
+   "w": 427,
+   "h": 96,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "03 Gestão e Tecnologia",
+   "sec": "header",
+   "w": 427,
+   "h": 96,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "04 Treinamentos",
+   "sec": "header",
+   "w": 427,
+   "h": 96,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Ver serviços (7)",
+   "sec": "header",
+   "w": 170,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Saúde Ocupacional",
+   "sec": "header",
+   "w": 214,
+   "h": 46,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Gestão de Absenteísmo",
+   "sec": "header",
+   "w": 304,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Monitoramento por Telemedici",
+   "sec": "header",
+   "w": 304,
+   "h": 73,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Administração de Ambulatório",
+   "sec": "header",
+   "w": 304,
+   "h": 73,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Plano de Continuidade de Neg",
+   "sec": "header",
+   "w": 304,
+   "h": 73,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Locação de Mão de Obra",
+   "sec": "header",
+   "w": 304,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Locação de Veículo de Urgênc",
+   "sec": "header",
+   "w": 304,
+   "h": 73,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Análise Ergonômica",
+   "sec": "header",
+   "w": 304,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Campanhas Vacinais",
+   "sec": "header",
+   "w": 304,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Ginástica Laboral e afins",
+   "sec": "header",
+   "w": 304,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: SIPAT Digital",
+   "sec": "header",
+   "w": 304,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Ir para aplicações ↓",
+   "sec": "header",
+   "w": 189,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Pausar animação",
+   "sec": "header",
+   "w": 101,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Acompanhamento",
+   "sec": "header",
+   "w": 188,
+   "h": 49,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Integração",
+   "sec": "header",
+   "w": 188,
+   "h": 49,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Informação gerencial",
+   "sec": "header",
+   "w": 188,
+   "h": 49,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Ir para aplicações",
+   "sec": "header",
+   "w": 122,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "SUMMARY",
+   "name": "Explorar recursos de tecnologia 9 recursos",
+   "sec": "header",
+   "w": 832,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Gestão e Tecnologia",
+   "sec": "header",
+   "w": 183,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conhecer a solução: eSocial",
+   "sec": "header",
+   "w": 196,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: eSocial",
+   "sec": "header",
+   "w": 264,
+   "h": 53,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conhecer a solução: Gestão de FAP/NTEP",
+   "sec": "header",
+   "w": 196,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Gestão de FAP/NTEP",
+   "sec": "header",
+   "w": 264,
+   "h": 53,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conhecer a solução: Riscos Psicossociais",
+   "sec": "header",
+   "w": 196,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Riscos Psicossociais",
+   "sec": "header",
+   "w": 264,
+   "h": 53,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Ver outras soluções",
+   "sec": "header",
+   "w": 256,
+   "h": 53,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Preparar a conversa",
+   "sec": "header",
+   "w": 315,
+   "h": 66,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Explorar mais soluções",
+   "sec": "header",
+   "w": 196,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Editar prioridades",
+   "sec": "header",
+   "w": 131,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "INPUT",
+   "name": "m09-novo-assunto",
+   "sec": "header",
+   "w": 399,
+   "h": 57,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Incluir",
+   "sec": "header",
+   "w": 115,
+   "h": 57,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Editar mensagem",
+   "sec": "header",
+   "w": 127,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "TEXTAREA",
+   "name": "Olá, Sabrina! Conheci a apresentação da CRED MHS e",
+   "sec": "header",
+   "w": 665,
+   "h": 177,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Preparar e-mail para Sabrina",
+   "sec": "header",
+   "w": 404,
+   "h": 66,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Copiar mensagem",
+   "sec": "header",
+   "w": 210,
+   "h": 53,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Copiar pauta",
+   "sec": "header",
+   "w": 167,
+   "h": 53,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Voltar",
+   "sec": "header",
+   "w": 87,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "E-mail sabrina.ferreira@credmhs.com.br",
+   "sec": "header",
+   "w": 418,
+   "h": 86,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Ligar para Sabrina +55 (21) 98896-7369",
+   "sec": "header",
+   "w": 418,
+   "h": 86,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Ver LinkedIn linkedin.com/in/sabrinaferreira (abre",
+   "sec": "header",
+   "w": 418,
+   "h": 86,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Site da CRED MHS www.credmhs.com.br (abre em nova ",
+   "sec": "header",
+   "w": 418,
+   "h": 86,
+   "inView": true,
+   "ring": true
+  }
+ ],
+ "small_1440": [],
+ "axe_1440": [],
+ "kbd_390": [
+  {
+   "tag": "A",
+   "name": "Pular para o conteúdo",
+   "sec": "header",
+   "w": 211,
+   "h": 51,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "CRED MHS — início da apresentação",
+   "sec": "header",
+   "w": 150,
+   "h": 45,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Sua pauta (0) 0",
+   "sec": "header",
+   "w": 44,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conteúdo",
+   "sec": "header",
+   "w": 108,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Conhecer a CRED",
+   "sec": "header",
+   "w": 241,
+   "h": 56,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "01 Saúde Ocupacional",
+   "sec": "header",
+   "w": 355,
+   "h": 77,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "02 Segurança do Trabalho",
+   "sec": "header",
+   "w": 355,
+   "h": 77,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "03 Gestão e Tecnologia",
+   "sec": "header",
+   "w": 355,
+   "h": 77,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "04 Treinamentos",
+   "sec": "header",
+   "w": 355,
+   "h": 77,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Personalizar com o nome da empresa",
+   "sec": "header",
+   "w": 314,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Continuar",
+   "sec": "header",
+   "w": 159,
+   "h": 48,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conhecer a atuação completa",
+   "sec": "header",
+   "w": 222,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conhecer a estrutura",
+   "sec": "header",
+   "w": 240,
+   "h": 48,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Ver outras empresas",
+   "sec": "header",
+   "w": 237,
+   "h": 48,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "01 Saúde Ocupacional",
+   "sec": "header",
+   "w": 355,
+   "h": 80,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Ver serviços (7)",
+   "sec": "header",
+   "w": 158,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Saúde Ocupacional",
+   "sec": "header",
+   "w": 214,
+   "h": 46,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "02 Segurança do Trabalho",
+   "sec": "header",
+   "w": 355,
+   "h": 80,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "03 Gestão e Tecnologia",
+   "sec": "header",
+   "w": 355,
+   "h": 80,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "04 Treinamentos",
+   "sec": "header",
+   "w": 355,
+   "h": 80,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Gestão de Absenteísmo",
+   "sec": "header",
+   "w": 355,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Monitoramento por Telemedici",
+   "sec": "header",
+   "w": 355,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Administração de Ambulatório",
+   "sec": "header",
+   "w": 355,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Plano de Continuidade de Neg",
+   "sec": "header",
+   "w": 355,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Locação de Mão de Obra",
+   "sec": "header",
+   "w": 355,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Locação de Veículo de Urgênc",
+   "sec": "header",
+   "w": 355,
+   "h": 68,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Análise Ergonômica",
+   "sec": "header",
+   "w": 355,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Campanhas Vacinais",
+   "sec": "header",
+   "w": 355,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Ginástica Laboral e afins",
+   "sec": "header",
+   "w": 355,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: SIPAT Digital",
+   "sec": "header",
+   "w": 355,
+   "h": 64,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Ir para aplicações ↓",
+   "sec": "header",
+   "w": 189,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Pausar animação",
+   "sec": "header",
+   "w": 101,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "SUMMARY",
+   "name": "Explorar recursos de tecnologia 9 recursos",
+   "sec": "header",
+   "w": 355,
+   "h": 82,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Gestão e Tecnologia",
+   "sec": "header",
+   "w": 183,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conhecer a solução: eSocial",
+   "sec": "header",
+   "w": 177,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: eSocial",
+   "sec": "header",
+   "w": 238,
+   "h": 48,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conhecer a solução: Gestão de FAP/NTEP",
+   "sec": "header",
+   "w": 177,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Gestão de FAP/NTEP",
+   "sec": "header",
+   "w": 238,
+   "h": 48,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Conhecer a solução: Riscos Psicossociais",
+   "sec": "header",
+   "w": 177,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Adicionar à conversa: Riscos Psicossociais",
+   "sec": "header",
+   "w": 238,
+   "h": 48,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Ver outras soluções",
+   "sec": "header",
+   "w": 231,
+   "h": 48,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Preparar a conversa",
+   "sec": "header",
+   "w": 262,
+   "h": 56,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Explorar mais soluções",
+   "sec": "header",
+   "w": 177,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Editar prioridades",
+   "sec": "header",
+   "w": 131,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "INPUT",
+   "name": "m09-novo-assunto",
+   "sec": "header",
+   "w": 259,
+   "h": 52,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Incluir",
+   "sec": "header",
+   "w": 104,
+   "h": 48,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Editar mensagem",
+   "sec": "header",
+   "w": 127,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "TEXTAREA",
+   "name": "Olá, Sabrina! Conheci a apresentação da CRED MHS e",
+   "sec": "header",
+   "w": 305,
+   "h": 227,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Preparar e-mail para Sabrina",
+   "sec": "header",
+   "w": 305,
+   "h": 77,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Copiar mensagem",
+   "sec": "header",
+   "w": 189,
+   "h": 48,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Copiar pauta",
+   "sec": "header",
+   "w": 150,
+   "h": 48,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "BUTTON",
+   "name": "Voltar",
+   "sec": "header",
+   "w": 79,
+   "h": 44,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "E-mail sabrina.ferreira@credmhs.com.br",
+   "sec": "header",
+   "w": 355,
+   "h": 80,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Ligar para Sabrina +55 (21) 98896-7369",
+   "sec": "header",
+   "w": 355,
+   "h": 80,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Ver LinkedIn linkedin.com/in/sabrinaferreira (abre",
+   "sec": "header",
+   "w": 355,
+   "h": 80,
+   "inView": true,
+   "ring": true
+  },
+  {
+   "tag": "A",
+   "name": "Site da CRED MHS www.credmhs.com.br (abre em nova ",
+   "sec": "header",
+   "w": 355,
+   "h": 80,
+   "inView": true,
+   "ring": true
+  }
+ ],
+ "small_390": [],
+ "axe_390": []
+}

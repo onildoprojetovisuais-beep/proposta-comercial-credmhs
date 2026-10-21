@@ -1,0 +1,576 @@
+Sim. O melhor é você levar para o outro chat um **briefing de direção completo**, porque lá você vai anexar a apresentação atual de 19 slides e pedir para o modelo cruzar **o que existe hoje × o que Sabrina quer × a solução que você combinou com ela**.
+
+Abaixo está estruturado para você copiar praticamente inteiro.
+
+# BRIEFING — NOVA APRESENTAÇÃO COMERCIAL CRED MHS
+
+## 1. Contexto do projeto
+
+A CRED MHS precisa modernizar sua apresentação comercial institucional.
+
+O material atual tem aproximadamente **19 slides** e, segundo Sabrina Ferreira, já não representa o momento atual da empresa. O conteúdo possui informações importantes e não está necessariamente errado; o principal problema é **como essas informações estão organizadas, apresentadas e percebidas**.
+
+A CRED evoluiu sua atuação e hoje quer se posicionar muito mais como uma empresa **estratégica, integrada, personalizada e orientada à solução**, e não como mais uma empresa tradicional de saúde e segurança do trabalho.
+
+A apresentação atual ficou visualmente antiga, cansativa e excessivamente baseada em texto. Sabrina foi bastante clara de que a CRED “já está em outro nível”, mas o material comercial não acompanhou essa evolução.
+
+Portanto, este projeto **não é simplesmente um redesign de slides**.
+
+O objetivo é reconstruir a experiência comercial da CRED a partir do conteúdo existente.
+
+---
+
+# 2. Problema central
+
+Existe uma diferença entre:
+
+**o que a CRED realmente é hoje**
+
+e
+
+**o que a apresentação atual faz a pessoa perceber que ela é.**
+
+Sabrina explicou que apresentações tradicionais desse mercado normalmente ficam presas em coisas como:
+
+- ASO;
+- programas legais;
+- laudos;
+- insalubridade/periculosidade;
+- obrigações;
+- produtos isolados;
+- lista de serviços.
+
+A CRED possui tudo isso porque faz parte da operação, mas **não quer que isso seja o teto da percepção sobre a empresa**.
+
+Nas palavras/conceito trazidos por Sabrina:
+
+> ASO, programas e demais entregas obrigatórias são o ponto de partida — o piso — e não o teto da atuação da CRED.
+
+Esse é um conceito importante para a nova narrativa.
+
+A nova apresentação precisa tirar a CRED do lugar-comum de “empresa que vende medicina e segurança do trabalho”.
+
+---
+
+# 3. O que a CRED quer comunicar
+
+A percepção desejada é de uma empresa que possui uma estrutura muito mais ampla.
+
+Durante a reunião, Sabrina citou elementos como:
+
+**atuação estratégica**  
+**abrangência nacional**  
+**experiência multissetorial**  
+**35 anos de experiência**  
+**valorização das pessoas dos clientes**  
+**ecossistema de soluções e serviços integrados**  
+**conhecimento do setor**  
+**capacidade de personalização / atuação sob medida**
+
+Ela também citou estruturas, tecnologias e diferenciais próprios da operação.
+
+IMPORTANTE: os nomes, descrições, números e detalhes desses diferenciais devem ser retirados da **apresentação atual que será anexada**, e não inventados a partir deste briefing.
+
+O briefing define a direção.  
+A apresentação atual será a fonte de conteúdo.
+
+---
+
+# 4. Principal ideia estratégica
+
+A apresentação precisa comunicar que:
+
+> **A CRED não entrega simplesmente serviços padronizados de saúde e segurança. Ela entende o contexto da empresa e constrói uma solução adequada àquela operação.**
+
+Sabrina enfatizou bastante a ideia de **“sob medida”**.
+
+Esse conceito deve aparecer não apenas escrito, mas na própria experiência da apresentação.
+
+Ela contou que, quando inicia uma conversa comercial, uma das primeiras coisas que faz é perguntar ao potencial cliente:
+
+> “Me fala um pouquinho do seu negócio.”
+
+Porque a CRED primeiro procura entender a empresa para depois apresentar uma solução.
+
+A nova apresentação deveria reproduzir esse espírito de **diálogo**, em vez de parecer um PDF institucional despejando informações.
+
+---
+
+# 5. Sensação desejada
+
+Existe uma frase da Sabrina que resume muito bem o resultado esperado.
+
+Ela quer que alguém abra a apresentação e pense:
+
+> **“Caraca, adorei. Top demais. Quero saber mais disso.”**
+
+Portanto, a apresentação precisa gerar:
+
+**curiosidade → descoberta → percepção de valor → vontade de continuar a conversa.**
+
+Não deve tentar explicar absolutamente tudo de uma vez.
+
+O objetivo não é fazer o usuário ler 19 telas cheias de texto.
+
+É conduzi-lo.
+
+---
+
+# 6. Formato combinado entre Nil e Sabrina
+
+Aqui está uma das mudanças mais importantes.
+
+Nil sugeriu **não reconstruir simplesmente um PowerPoint/PDF tradicional**.
+
+A proposta é transformar a apresentação em uma:
+
+# APRESENTAÇÃO COMERCIAL INTERATIVA EM FORMATO WEB
+
+Ela funcionará como uma página/experiência digital.
+
+Será:
+
+- publicada online;
+- acessada por link;
+- responsiva;
+- adaptada para desktop;
+- adaptada para celular;
+- animada;
+- interativa;
+- navegável;
+- atualizável posteriormente.
+
+Isso permite que o material continue vivo.
+
+Novos dados, números, clientes, certificações, serviços ou informações poderão ser incorporados posteriormente sem precisar reconstruir todo o material.
+
+Sabrina aceitou essa direção.
+
+---
+
+# 7. Não pensar como “site institucional”
+
+Apesar de tecnicamente ser uma experiência web, **não deve parecer simplesmente o site da CRED**.
+
+É uma apresentação comercial.
+
+A lógica precisa estar mais próxima de:
+
+**deck + storytelling + experiência digital.**
+
+Ou seja:
+
+TELA / MOMENTO  
+↓  
+informação principal  
+↓  
+interação  
+↓  
+descoberta  
+↓  
+próximo argumento.
+
+A navegação pode utilizar recursos como clique, expansão de conteúdo, transições, revelação progressiva e movimento.
+
+Mas a interação deve servir à narrativa.
+
+**Não colocar animação simplesmente porque é possível.**
+
+---
+
+# 8. Estratégia para reduzir o excesso de texto
+
+Nil levantou durante a reunião justamente o problema de “textão”.
+
+A ideia discutida foi que nem toda informação precisa estar exposta simultaneamente.
+
+Exemplo:
+
+Em vez de:
+
+**Título**
+
++ 3 parágrafos
+
++ 6 bullets
+
++ explicação
+
+podemos ter:
+
+**Título**
+
+Frase curta.
+
+**[Conheça nossa atuação]**
+
+Ao clicar:
+
+→ conteúdo aparece.
+
+Ou:
+
+**4 pilares**
+
+O usuário escolhe um.
+
+→ aquele conteúdo é revelado.
+
+Isso permite manter informações importantes do material atual sem criar uma experiência visualmente pesada.
+
+A nova apresentação deve trabalhar fortemente com:
+
+**hierarquia + síntese + conteúdo progressivo.**
+
+---
+
+# 9. A apresentação precisa parecer uma conversa
+
+Esse ponto veio diretamente da Sabrina.
+
+Ela não quer uma apresentação que apenas diga:
+
+> “Quem somos.”
+
+> “Nossos serviços.”
+
+> “Nossos clientes.”
+
+> “Nossos números.”
+
+Ela quer algo mais próximo da experiência comercial que ela própria proporciona em uma reunião.
+
+Portanto, ao analisar os 19 slides atuais, deve-se perguntar constantemente:
+
+> **“Como transformamos esta informação em parte de uma conversa?”**
+
+Em alguns momentos podemos provocar.
+
+Em outros responder.
+
+Em outros revelar.
+
+Em outros mostrar evidência.
+
+A apresentação deve ter ritmo.
+
+---
+
+# 10. Personalização por executivo comercial
+
+Outro pedido específico da Sabrina:
+
+A apresentação precisa permitir uma camada de **personalização por executivo**.
+
+Ela imaginou que cada executivo possa ter sua própria apresentação/entrada com:
+
+- foto;
+- nome;
+- informações;
+- identificação;
+- eventualmente uma introdução própria.
+
+Sabrina citou como referência algo que viu em outra empresa, em que **a pessoa aparece antes da empresa**.
+
+Nil conectou isso à ideia de diálogo.
+
+Exemplo conceitual:
+
+> “Oi, eu sou Sabrina.”
+
+↓  
+introdução
+
+↓  
+começa a experiência CRED.
+
+Não significa que obrigatoriamente essa frase ou estrutura final será utilizada.
+
+É uma **direção de experiência** que deve ser explorada.
+
+---
+
+# 11. Conteúdo existente
+
+A nova apresentação deve utilizar como matéria-prima o conteúdo da apresentação atual.
+
+Sabrina disse explicitamente que **os textos atuais não são necessariamente ruins**.
+
+O problema principal é:
+
+**como estão apresentados.**
+
+Portanto, NÃO partir do princípio de que precisamos jogar fora os 19 slides e escrever tudo novamente.
+
+O processo deve ser:
+
+**conteúdo atual**
+↓
+entender
+↓
+selecionar
+↓
+hierarquizar
+↓
+enxugar
+↓
+reorganizar
+↓
+transformar em narrativa
+↓
+apresentar de maneira contemporânea.
+
+Quando necessário, textos podem ser reduzidos ou adaptados para melhorar a experiência.
+
+Mas não devemos inventar informações corporativas que não estejam no material fornecido.
+
+---
+
+# 12. Identidade visual
+
+Não está sendo feito um rebranding da CRED MHS neste projeto.
+
+Sabrina deixou isso claro.
+
+A marca atual permanece.
+
+Porém, a apresentação pode estabelecer uma **nova linguagem visual de comunicação da CRED**, mais atual e sofisticada.
+
+Isso é importante porque Sabrina mencionou que essa direção visual poderá posteriormente ser transposta para outros pontos da marca.
+
+Inclusive o **site da CRED** poderá futuramente ser atualizado seguindo essa linguagem.
+
+Portanto:
+
+**não redesenhar logo.**
+
+Mas podemos evoluir:
+
+- tipografia;
+- composição;
+- grids;
+- uso de imagens;
+- movimento;
+- dados;
+- cards;
+- espaçamento;
+- hierarquia;
+- linguagem digital;
+- comportamento das interfaces.
+
+A apresentação pode funcionar como o primeiro território para testar a evolução visual da comunicação da CRED.
+
+---
+
+# 13. Público
+
+Sabrina deixou claro que o material será usado comercialmente inclusive em conversas com **empresas grandes e multinacionais**.
+
+Portanto, precisa existir percepção de:
+
+**estrutura**  
+**maturidade**  
+**credibilidade**  
+**capacidade operacional**  
+**tecnologia**  
+**personalização**  
+**abrangência**
+
+sem cair numa estética corporativa genérica.
+
+A apresentação precisa sustentar visualmente o nível das empresas com as quais a CRED pretende conversar.
+
+---
+
+# 14. Estrutura narrativa — ainda NÃO definida
+
+Importante para o outro chat:
+
+**não considerar que a ordem atual dos 19 slides precisa ser mantida.**
+
+A estrutura deverá ser reconstruída depois da análise do arquivo.
+
+Uma hipótese de raciocínio é:
+
+**ABERTURA**
+
+provocação / diálogo
+
+↓
+
+**ENTENDER O NEGÓCIO**
+
+CRED não começa pelo produto.
+
+↓
+
+**O PROBLEMA DO MODELO TRADICIONAL**
+
+mercado regulado ≠ solução genérica.
+
+↓
+
+**A CRED**
+
+quem somos / experiência / estrutura.
+
+↓
+
+**ECOSSISTEMA**
+
+mostrar que existe muito mais do que serviços isolados.
+
+↓
+
+**COMO ATUAMOS**
+
+personalização / sob medida.
+
+↓
+
+**TECNOLOGIA + DADOS + GESTÃO**
+
+diferenciais.
+
+↓
+
+**CAPACIDADE**
+
+abrangência / números / estrutura.
+
+↓
+
+**PROVA**
+
+clientes / certificações / evidências.
+
+↓
+
+**SOLUÇÕES**
+
+organizadas de maneira inteligente, não como catálogo infinito.
+
+↓
+
+**CONVERSA**
+
+próximo passo.
+
+Mas isso é apenas uma **hipótese de arquitetura**.
+
+O próximo chat deve primeiro estudar os 19 slides e então propor a melhor narrativa.
+
+---
+
+# 15. O que NÃO queremos
+
+Evitar:
+
+- PDF corporativo tradicional;
+- simplesmente “embelezar” os 19 slides;
+- apresentação cheia de caixas;
+- textão;
+- lista interminável de serviços;
+- estrutura “quem somos / missão / visão / serviços / clientes / contato” sem narrativa;
+- excesso de ícones;
+- estética genérica de empresa de saúde;
+- animações gratuitas;
+- cara de template;
+- transformar tudo em dashboard;
+- descaracterizar a CRED;
+- inventar dados ou diferenciais;
+- rebranding da marca neste momento.
+
+---
+
+# 16. O que queremos
+
+A apresentação precisa ser:
+
+**moderna**  
+**premium**  
+**estratégica**  
+**digital**  
+**dinâmica**  
+**interativa**  
+**responsiva**  
+**objetiva**  
+**comercial**  
+**memorável**
+
+E principalmente:
+
+> **precisa fazer a pessoa querer continuar a conversa com a CRED.**
+
+---
+
+# 17. Prazo
+
+Prazo acordado:
+
+**entrega até 12/10/2026.**
+
+O projeto foi tratado como uma entrega de aproximadamente **uma semana**, justamente porque a CRED precisa utilizar o novo material em uma ação comercial importante.
+
+Por isso, a análise da apresentação existente precisa ser pragmática: preservar o que tem valor e concentrar energia em **narrativa, direção visual e experiência**.
+
+---
+
+# 18. Instrução para o próximo chat
+
+Depois deste briefing, vou anexar a **apresentação comercial atual da CRED MHS, com aproximadamente 19 slides**.
+
+Sua primeira tarefa NÃO é criar a nova apresentação.
+
+Primeiro:
+
+1. Leia integralmente a apresentação atual.
+2. Mapeie slide por slide:
+   - qual informação existe;
+   - qual é sua função comercial;
+   - o que é importante preservar;
+   - o que está redundante;
+   - o que pode ser resumido;
+   - o que deveria mudar de posição;
+   - o que pode virar interação;
+   - o que merece mais destaque.
+3. Identifique os principais argumentos comerciais existentes no material.
+4. Identifique quais informações sustentam:
+   - credibilidade;
+   - abrangência;
+   - experiência;
+   - tecnologia;
+   - personalização;
+   - ecossistema;
+   - capacidade operacional;
+   - prova.
+5. Depois disso, proponha uma **nova arquitetura narrativa completa para a apresentação**.
+6. Não fique preso aos 19 slides atuais. Uma informação pode ser condensada, dividida ou reorganizada.
+7. Para cada nova seção/tela proposta, apresente:
+   - objetivo;
+   - mensagem principal;
+   - conteúdo proveniente do material atual;
+   - sugestão de copy/título;
+   - direção visual;
+   - comportamento/interação;
+   - transição para a próxima etapa.
+8. Separe claramente:
+   - informação existente no arquivo;
+   - recomendação estratégica;
+   - copy nova sugerida.
+9. Não invente números, clientes, certificações, estrutura operacional ou qualquer informação corporativa que não esteja na apresentação fornecida.
+10. Pense na entrega final como **uma apresentação comercial web interativa**, e não como um PowerPoint convertido para HTML.
+
+### Resultado esperado
+
+Ao final, quero conseguir enxergar a experiência inteira:
+
+**usuário abre o link → encontra o executivo → entra na narrativa → entende a CRED → descobre os diferenciais → vê provas → compreende o ecossistema → percebe que a solução é sob medida → quer conversar.**
+
+Esse é o norte.
+
+E eu manteria uma frase como filtro durante todo o processo:
+
+> **“Isso está ajudando a CRED a sair do óbvio ou estamos apenas fazendo um slide mais bonito?”**
+
+Se a resposta for apenas “ficou mais bonito”, ainda não resolvemos o problema.

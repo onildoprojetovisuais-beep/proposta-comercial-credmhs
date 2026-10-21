@@ -1,0 +1,60 @@
+.header {
+  display: grid;
+  gap: var(--space-6);
+  margin-bottom: var(--header-to-content);
+}
+
+.flush {
+  margin-bottom: 0;
+}
+
+.main {
+  display: grid;
+  gap: var(--header-gap);
+  max-width: 62rem;
+}
+
+.eyebrowRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+}
+
+/* Eyebrow V3: tinta, caixa alta com tracking largo. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--cred-ink);
+}
+
+/* Rodada 21/10: traço decorativo antes do rótulo retirado (pedido da Sabrina: menos traços). */
+
+.title {
+  max-width: 22ch;
+}
+
+.intro {
+  color: var(--gray-800);
+}
+
+:global([data-surface='dark']) .eyebrow,
+:global([data-surface='dark']) .intro {
+  color: var(--color-text-muted-on-dark);
+}
+
+:global([data-surface='yellow']) .intro {
+  color: var(--cred-ink);
+}
+
+.aside {
+  align-self: end;
+}
+
+@media (min-width: 1024px) {
+  .withAside {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+}

@@ -1,0 +1,532 @@
+[
+ [
+  "Executivo: link válido",
+  "passou",
+  "h1='Olá, eu sou Sabrina.' tel=tel:+5521988967369 mailto=mailto:sabrina.ferreira@credmhs.com.br?subject=C"
+ ],
+ [
+  "Executivo: sem parâmetro",
+  "passou",
+  "h1='Olá, eu sou Sabrina.' tel=tel:+5521988967369 mailto=mailto:sabrina.ferreira@credmhs.com.br?subject=C"
+ ],
+ [
+  "Executivo: ID desconhecido",
+  "passou",
+  "h1='Olá, eu sou Sabrina.' tel=tel:+5521988967369 mailto=mailto:sabrina.ferreira@credmhs.com.br?subject=C"
+ ],
+ [
+  "Executivo: ID malicioso",
+  "passou",
+  "h1='Olá, eu sou Sabrina.' tel=tel:+5521988967369 mailto=mailto:sabrina.ferreira@credmhs.com.br?subject=C"
+ ],
+ [
+  "Executivo: query com e-mail/telefone injetados",
+  "passou",
+  "h1='Olá, eu sou Sabrina.' tel=tel:+5521988967369 mailto=mailto:sabrina.ferreira@credmhs.com.br?subject=C"
+ ],
+ [
+  "0 prioridades: 'Continuar' disponível",
+  "passou",
+  "link presente sem escolhas"
+ ],
+ [
+  "0 prioridades: 'Continuar' leva a M03",
+  "passou",
+  "m03.top=64 url=http://localhost:4173/?executivo=sabrina-ferreira#m03"
+ ],
+ [
+  "1 prioridade",
+  "passou",
+  "storage=['seguranca'] feedback='Vamos destacar essas frentes ao longo da apresentação.'"
+ ],
+ [
+  "2 prioridades (ordem de escolha)",
+  "passou",
+  "['seguranca', 'treinamento']"
+ ],
+ [
+  "3ª prioridade: mantém as duas + microcopy de limite",
+  "passou",
+  "storage=['seguranca', 'treinamento'] feedback='!\nPara escolher outra prioridade, remova uma das duas selecionadas.'"
+ ],
+ [
+  "Seleção não move a página",
+  "passou",
+  "scrollY 1127->1127"
+ ],
+ [
+  "Desmarcar e marcar outra é imediato",
+  "passou",
+  "['seguranca', 'saude']"
+ ],
+ [
+  "M05 abre na 1ª prioridade (Segurança)",
+  "passou",
+  "02 Segurança do Trabalho Sua prioridade"
+ ],
+ [
+  "Marcador 'Sua prioridade' em M05",
+  "passou",
+  ""
+ ],
+ [
+  "M05 frente: troca manual não persiste após reload (volta à prioridade)",
+  "passou",
+  "02 Segurança do Trabalho Sua prioridade"
+ ],
+ [
+  "'Conhecer a atuação completa' limpa prioridades e mantém assuntos",
+  "passou",
+  "{'schemaVersion': 1, 'executiveId': 'sabrina-ferreira', 'companyName': '', 'priorities': [], 'topics': ['servico:gestao-absenteismo'], 'customItems': []}"
+ ],
+ [
+  "Empresa: vazio",
+  "passou",
+  "h2='Uma conversa sobre a sua operação' stored='' len=0"
+ ],
+ [
+  "Empresa: acentos/especiais",
+  "passou",
+  "h2='Uma conversa sobre Indústria Açaí & Cia — São João d'Él-Rei' stored='Indústria Açaí & Cia — São João d'Él-Rei' len=40"
+ ],
+ [
+  "Empresa: HTML",
+  "passou",
+  "h2='Uma conversa sobre <img src=x onerror=alert(1)><b>XSS</b>' stored='<img src=x onerror=alert(1)><b>XSS</b>' len=38"
+ ],
+ [
+  "Empresa: longo (120 → 80)",
+  "passou",
+  "h2='Uma conversa sobre AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' stored='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' len=80"
+ ],
+ [
+  "Empresa fora do título do documento",
+  "passou",
+  "CRED MHS — Gestão de Saúde e Segurança do Trabalho"
+ ],
+ [
+  "Nome longo sem scroll horizontal (1440px)",
+  "passou",
+  "overflow=0px; captura m09-nome-longo-1440.png"
+ ],
+ [
+  "Nome longo sem scroll horizontal (360px)",
+  "passou",
+  "overflow=0px; captura m09-nome-longo-360.png"
+ ],
+ [
+  "M05: adicionar serviço → 'Remover da conversa' + anúncio + contador",
+  "passou",
+  "nome='Remover da conversa: Análise Ergonômica' live='Análise Ergonômica adicionado à pauta.' contador='Sua pauta (1)'"
+ ],
+ [
+  "Adicionar, remover, adicionar de novo sem duplicar",
+  "passou",
+  "['servico:analise-ergonomica']"
+ ],
+ [
+  "M05: adicionar frente (frente:*)",
+  "passou",
+  "botão='Adicionar à conversa: Saúde Ocupacional' topics=['servico:analise-ergonomica', 'frente:saude']"
+ ],
+ [
+  "Visitar/abrir tema não adiciona à pauta",
+  "passou",
+  "antes=2 depois=2"
+ ],
+ [
+  "M06: adicionar Gestão e Tecnologia",
+  "passou",
+  "['servico:analise-ergonomica', 'frente:saude', 'frente:gestao']"
+ ],
+ [
+  "M07: adicionar as 3 aplicações",
+  "passou",
+  "['servico:analise-ergonomica', 'frente:saude', 'frente:gestao', 'aplicacao:esocial', 'aplicacao:fap-ntep', 'aplicacao:riscos-psicossociais'] live='Riscos Psicossociais adicionado à pauta.'"
+ ],
+ [
+  "M07: 'Conhecer a solução' expande sem adicionar",
+  "passou",
+  "aria-expanded=true nome após abrir='Fechar: eSocial'"
+ ],
+ [
+  "Pauta: reordenar",
+  "passou",
+  "['servico:analise-ergonomica', 'frente:saude'] -> ['frente:saude', 'servico:analise-ergonomica'] live='Análise Ergonômica agora está na posição 2.'"
+ ],
+ [
+  "Pauta: remover",
+  "passou",
+  "6 -> 5 live='Saúde Ocupacional removido da pauta.'"
+ ],
+ [
+  "Pauta: item livre (texto puro)",
+  "passou",
+  "[{'id': 'nota:muzpva3j-1', 'text': 'Treinamento de brigada <b>noturna</b>'}]"
+ ],
+ [
+  "Pauta: item livre duplicado rejeitado com microcopy",
+  "passou",
+  ""
+ ],
+ [
+  "Pauta: item livre vazio rejeitado",
+  "passou",
+  ""
+ ],
+ [
+  "Pauta: editar item livre",
+  "passou",
+  "[{'id': 'nota:muzpva3j-1', 'text': 'Brigada de incêndio'}]"
+ ],
+ [
+  "Contador 'Sua pauta (n)' = assuntos + itens livres",
+  "passou",
+  "contador='Sua pauta (6)' n=6"
+ ],
+ [
+  "mailto: corpo decodificado == prévia; assunto curto",
+  "passou",
+  "subject=['Conversa sobre a CRED MHS'] len=556"
+ ],
+ [
+  "Mensagem inclui item livre",
+  "passou",
+  "Olá, Sabrina! |  | Conheci a apresentação da CRED MHS e gostaria de conversar sobre a minha empresa. |  | Assuntos para aprofundar: Análise Ergonômica; Gestão e Tecnologia; eSocial; Gestão de FAP/NTEP; Riscos Psicossociais; Brigada de incêndio. |  | Podemos conversar sobre como a CRED pode apoiar nossa gestão?"
+ ],
+ [
+  "mailto usa a mensagem editada",
+  "passou",
+  ""
+ ],
+ [
+  "Escolhas mudam após edição: texto preservado + aviso",
+  "passou",
+  ""
+ ],
+ [
+  "'Atualizar mensagem' regenera com escolhas",
+  "passou",
+  "Olá, Sabrina! |  | Conheci a apresentação da CRED MHS e gostaria de conversar sobre a minha empresa. |  | Assuntos para aprofundar: Análise Ergonômica; Gestão e Tecnologia; eSocial; Gestão de FAP/NTEP; Riscos Psicossociais; SIPAT Digital; Brigada de "
+ ],
+ [
+  "Copiar mensagem (Clipboard API)",
+  "passou",
+  "feedback='Mensagem copiada.'"
+ ],
+ [
+  "Copiar pauta",
+  "passou",
+  "feedback='Pauta copiada.' texto='Uma conversa sobre a sua operação\\r\\nSabrina Ferreira — Executiva de Negócios, CRED MHS\\r\\n\\r\\nAssuntos para aprofundar:\\r\\n- Análise Ergonômica\\r\\n- Gestão e Tecnologia\\r\\n- eSocial\\r\\n- Gestão de FAP/NTEP\\r\\n- Risc'"
+ ],
+ [
+  "Reload preserva empresa/prioridades/assuntos",
+  "passou",
+  "contador='Sua pauta (7)'"
+ ],
+ [
+  "Rascunho não persiste em storage",
+  "passou",
+  ""
+ ],
+ [
+  "Nada sensível na URL",
+  "passou",
+  "http://localhost:4173/?executivo=sabrina-ferreira#m10"
+ ],
+ [
+  "Reset pede confirmação",
+  "passou",
+  "Reiniciar apresentação |  | Reiniciar apaga o nome da empresa e as escolhas desta sessão. |  | Fechar | Continuar apresentação | Reiniciar"
+ ],
+ [
+  "Esc cancela reset e devolve foco ao acionador",
+  "passou",
+  "foco='↺Reiniciar apresentação'"
+ ],
+ [
+  "Reset: limpa sessão, mantém executivo, volta a M01 com foco",
+  "passou",
+  "storage=None foco=m01|SECTION|m01 m01.top=64 url=http://localhost:4173/?executivo=sabrina-ferreira#m01 contador='Sua pauta (0)'"
+ ],
+ [
+  "Reset: mensagem volta ao padrão sem escolhas",
+  "passou",
+  "Olá, Sabrina! |  | Conheci a apresentação da CRED MHS e gostaria de conversar sobre as necessidades da minha empresa e como a CRED pode apoiar nossa gestão."
+ ],
+ [
+  "Reset: M09 sem empresa e vazio",
+  "passou",
+  ""
+ ],
+ [
+  "Reset: prioridades desmarcadas, detalhes fechados",
+  "passou",
+  "['false', 'false', 'false', 'false']"
+ ],
+ [
+  "Pauta longa (20 livres + 10 serviços) sem overflow em 360px",
+  "passou",
+  "itens livres=20 overflow=0"
+ ],
+ [
+  "Limite de 20 itens livres com microcopy",
+  "passou",
+  ""
+ ],
+ [
+  "Mensagem longa: mailto só destinatário+assunto e orientação de cópia",
+  "passou",
+  "href=mailto:sabrina.ferreira@credmhs.com.br?subject=Conversa%20sobre%20a%20CRED%20MHS"
+ ],
+ [
+  "Mensagem longa: prévia mantém a pauta inteira",
+  "passou",
+  ""
+ ],
+ [
+  "Copiar sem Clipboard API: feedback + texto selecionado",
+  "passou",
+  "feedback='Não foi possível copiar automaticamente. Selecione e copie o texto abaixo. O texto da mensagem está selecionado no campo acima.' sel=m10-mensagem:152"
+ ],
+ [
+  "Copiar pauta sem Clipboard API: textarea de fallback",
+  "passou",
+  "Não foi possível copiar automaticamente. Selecione e copie o texto abaixo."
+ ],
+ [
+  "Storage indisponível: funciona em memória",
+  "passou",
+  "errs=[]"
+ ],
+ [
+  "Storage JSON quebrado: validado/descartado",
+  "passou",
+  "storage=None h2='Uma conversa sobre a sua operação' pressed=['false', 'false', 'false', 'false'] errs=[]"
+ ],
+ [
+  "Storage versão incompatível: validado/descartado",
+  "passou",
+  "storage=None h2='Uma conversa sobre a sua operação' pressed=['false', 'false', 'false', 'false'] errs=[]"
+ ],
+ [
+  "Storage campos inválidos: validado/descartado",
+  "passou",
+  "storage={\"schemaVersion\":1,\"executiveId\":\"sabrina-ferreira\",\"companyName\":\"\",\"priorities\":[\"saude\",\"gestao\"],\"topics\":[\"servico:sipat-digital\"],\"customItems\":[{\"id\":\"nota:ok1\",\"text\":\"ok\"}]} h2='Uma conversa sobre a sua operação' pressed=['true', 'false', 'true', 'false'] errs=[]"
+ ],
+ [
+  "Storage de outro executivo: validado/descartado",
+  "passou",
+  "storage=None h2='Uma conversa sobre a sua operação' pressed=['false', 'false', 'false', 'false'] errs=[]"
+ ],
+ [
+  "Deep link #m01 sem estado",
+  "passou",
+  "section.top=64 titulo=[262, 447] header.bottom=64"
+ ],
+ [
+  "Deep link #m02 sem estado",
+  "passou",
+  "section.top=64 titulo=[230, 353] header.bottom=64"
+ ],
+ [
+  "Deep link #m03 sem estado",
+  "passou",
+  "section.top=64 titulo=[230, 352] header.bottom=64"
+ ],
+ [
+  "Deep link #m04 sem estado",
+  "passou",
+  "section.top=64 titulo=[230, 353] header.bottom=64"
+ ],
+ [
+  "Deep link #m05 sem estado",
+  "passou",
+  "section.top=64 titulo=[231, 353] header.bottom=64"
+ ],
+ [
+  "Deep link #m06 sem estado",
+  "passou",
+  "section.top=64 titulo=[231, 377] header.bottom=64"
+ ],
+ [
+  "Deep link #m07 sem estado",
+  "passou",
+  "section.top=64 titulo=[230, 376] header.bottom=64"
+ ],
+ [
+  "Deep link #m08 sem estado",
+  "passou",
+  "section.top=64 titulo=[231, 449] header.bottom=64"
+ ],
+ [
+  "Deep link #m09 sem estado",
+  "passou",
+  "section.top=64 titulo=[239, 457] header.bottom=64"
+ ],
+ [
+  "Deep link #m10 sem estado",
+  "passou",
+  "section.top=64 titulo=[231, 377] header.bottom=64"
+ ],
+ [
+  "Slug #apresentacao → m01 (carga)",
+  "passou",
+  "top=64 url=http://localhost:4173/?executivo=sabrina-ferreira#m01"
+ ],
+ [
+  "Slug #estrutura → m03 (carga)",
+  "passou",
+  "top=64 url=http://localhost:4173/?executivo=sabrina-ferreira#m03"
+ ],
+ [
+  "Slug #ecossistema → m05 (carga)",
+  "passou",
+  "top=64 url=http://localhost:4173/?executivo=sabrina-ferreira#m05"
+ ],
+ [
+  "Slug #gestao-e-tecnologia → m06 (carga)",
+  "passou",
+  "top=64 url=http://localhost:4173/?executivo=sabrina-ferreira#m06"
+ ],
+ [
+  "Slug #sua-pauta → m09 (carga)",
+  "passou",
+  "top=64 url=http://localhost:4173/?executivo=sabrina-ferreira#m09"
+ ],
+ [
+  "Slug #contato → m10 (carga)",
+  "passou",
+  "top=64 url=http://localhost:4173/?executivo=sabrina-ferreira#m10"
+ ],
+ [
+  "Slug #ESTRUTURA → m03 (carga)",
+  "passou",
+  "top=64 url=http://localhost:4173/?executivo=sabrina-ferreira#m03"
+ ],
+ [
+  "Slug por troca de hash na mesma página (#estrutura)",
+  "passou",
+  "top=64"
+ ],
+ [
+  "Hash desconhecido não quebra",
+  "passou",
+  "http://localhost:4173/?executivo=sabrina-ferreira#m01"
+ ],
+ [
+  "Sem scroll horizontal 320px (contador 2 dígitos)",
+  "passou",
+  "overflow=0 contador='Sua pauta (13)'"
+ ],
+ [
+  "Sem scroll horizontal 360px (contador 2 dígitos)",
+  "passou",
+  "overflow=0 contador='Sua pauta (13)'"
+ ],
+ [
+  "Sem scroll horizontal 390px (contador 2 dígitos)",
+  "passou",
+  "overflow=0 contador='Sua pauta (13)'"
+ ],
+ [
+  "Sem scroll horizontal 768px (contador 2 dígitos)",
+  "passou",
+  "overflow=0 contador='Sua pauta (13)'"
+ ],
+ [
+  "Sem scroll horizontal 1024px (contador 2 dígitos)",
+  "passou",
+  "overflow=0 contador='Sua pauta (13)'"
+ ],
+ [
+  "Sem scroll horizontal 1280px (contador 2 dígitos)",
+  "passou",
+  "overflow=0 contador='Sua pauta (13)'"
+ ],
+ [
+  "Sem scroll horizontal 1440px (contador 2 dígitos)",
+  "passou",
+  "overflow=0 contador='Sua pauta (13)'"
+ ],
+ [
+  "Sem scroll horizontal 320px (página nova)",
+  "passou",
+  "overflow=0"
+ ],
+ [
+  "Sem scroll horizontal 360px (página nova)",
+  "passou",
+  "overflow=0"
+ ],
+ [
+  "Sem scroll horizontal 390px (página nova)",
+  "passou",
+  "overflow=0"
+ ],
+ [
+  "Sem scroll horizontal 1024px (página nova)",
+  "passou",
+  "overflow=0"
+ ],
+ [
+  "Sem scroll horizontal 1280px (página nova)",
+  "passou",
+  "overflow=0"
+ ],
+ [
+  "Sem scroll horizontal 1440px (página nova)",
+  "passou",
+  "overflow=0"
+ ],
+ [
+  "A5: botão da frente tem nome com a frente",
+  "passou",
+  "Adicionar à conversa: Saúde Ocupacional"
+ ],
+ [
+  "Anúncio M05 usa 'pauta'",
+  "passou",
+  "Saúde Ocupacional adicionado à pauta."
+ ],
+ [
+  "M05 catálogo adicional: 10 linhas, nomes únicos",
+  "passou",
+  "['Adicionar à conversa: Gestão de Absenteísmo', 'Adicionar à conversa: Monitoramento por Telemedicina', 'Adicionar à conversa: Administração de Ambulatórios']"
+ ],
+ [
+  "M05 linha selecionada → 'Remover da conversa'",
+  "passou",
+  "Remover da conversa: Gestão de Absenteísmo"
+ ],
+ [
+  "M05 linhas ≥44px",
+  "passou",
+  "[64, 73, 73, 73, 64, 73, 64, 64, 64, 64]"
+ ],
+ [
+  "Anúncio M07 usa 'pauta'",
+  "passou",
+  "eSocial adicionado à pauta."
+ ],
+ [
+  "A8: e-mail visível como texto em M10",
+  "passou",
+  "E-mail | sabrina.ferreira@credmhs.com.br"
+ ],
+ [
+  "A3: nenhum <aside> dentro de <main>",
+  "passou",
+  ""
+ ],
+ [
+  "Alvos <44px visíveis (1440)",
+  "passou",
+  "[]"
+ ],
+ [
+  "Alvos <44px visíveis (390)",
+  "passou",
+  "[]"
+ ]
+]

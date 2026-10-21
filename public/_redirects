@@ -1,0 +1,2 @@
+/painel    /painel/index.html   200
+/painel/*  /painel/index.html   200

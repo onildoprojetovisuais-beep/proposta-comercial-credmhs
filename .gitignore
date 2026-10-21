@@ -1,0 +1,19 @@
+node_modules/
+dist/
+*.local
+.vite/
+remotion/out/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+supabase/.temp/
+supabase/.branches/
+
+# Materiais enviados ao cliente (vídeos/PDF de validação)
+entregas/
+
+# Configuração local do Claude Code
+.claude/settings.local.json
+tsconfig.tsbuildinfo

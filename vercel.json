@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/painel", "destination": "/painel/index.html" },
+    { "source": "/painel/(.*)", "destination": "/painel/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/painel/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    }
+  ]
+}

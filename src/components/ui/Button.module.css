@@ -1,0 +1,177 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  width: auto;
+  max-width: 100%;
+  min-height: var(--tap-min);
+  border: 2px solid transparent;
+  border-radius: var(--radius-control, 2px);
+  font-family: var(--font-brand);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  text-wrap: balance;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled,
+.button[aria-disabled='true'] {
+  opacity: 0.5;
+}
+
+.label {
+  display: inline-block;
+}
+
+.icon {
+  display: inline-flex;
+  flex: none;
+  width: 1.1em;
+  height: 1.1em;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.icon > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.button:hover .icon:last-child {
+  transform: translateX(2px);
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+/* Tamanhos: dimensionados pelo rótulo, sem stretch acidental */
+.sm {
+  min-height: var(--tap-min);
+  padding: 0.45em 1.1em;
+  font-size: var(--fs-small);
+}
+
+.md {
+  padding: 0.7em 1.5em;
+  font-size: var(--fs-body);
+}
+
+.lg {
+  min-height: 56px;
+  padding: 0.8em 1.9em;
+  font-size: var(--fs-lead);
+}
+
+/* Variantes */
+.primary {
+  background: var(--cred-yellow);
+  color: var(--cred-ink);
+  border-color: var(--cred-yellow);
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--cred-ink);
+  color: var(--cred-yellow);
+  border-color: var(--cred-ink);
+}
+
+[data-surface='dark'] .primary:hover:not(:disabled) {
+  background: var(--cred-white);
+  color: var(--cred-ink);
+  border-color: var(--cred-white);
+}
+
+/* V3: no amarelo, a ação principal é uma pílula de tinta (branco sobre tinta ≈16:1). */
+:global([data-surface='yellow']) .primary {
+  background: var(--cred-ink);
+  color: var(--cred-white);
+  border-color: var(--cred-ink);
+}
+
+:global([data-surface='yellow']) .primary:hover:not(:disabled) {
+  background: var(--cred-white);
+  color: var(--cred-ink);
+  border-color: var(--cred-ink);
+}
+
+.secondary {
+  background: transparent;
+  color: var(--cred-ink);
+  border-color: var(--cred-ink);
+}
+
+.secondary:hover:not(:disabled) {
+  background: var(--cred-ink);
+  color: var(--cred-white);
+}
+
+.ghost-dark {
+  background: transparent;
+  color: var(--cred-white);
+  border-color: rgb(255 255 255 / 0.7);
+}
+
+.ghost-dark:hover:not(:disabled) {
+  background: var(--cred-white);
+  color: var(--cred-ink);
+  border-color: var(--cred-white);
+}
+
+/* Ação destrutiva (só em diálogo de confirmação): tinta preenchida, texto branco (16,9:1).
+   Hover em magenta auxiliar do brandbook (Pantone 91-8 C, branco 6,6:1), sem usar o amarelo de avanço. */
+.danger {
+  background: var(--cred-ink);
+  color: var(--cred-white);
+  border-color: var(--cred-ink);
+}
+
+.danger:hover:not(:disabled) {
+  background: var(--cred-aux-magenta);
+  border-color: var(--cred-aux-magenta);
+  color: var(--cred-white);
+}
+
+.link {
+  min-height: var(--tap-min);
+  padding: 0.35em 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: inherit;
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+  text-decoration-color: var(--cred-yellow);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.25em;
+}
+
+.link:hover:not(:disabled) {
+  text-decoration-color: currentColor;
+}
+
+/* CTA principal no celular: rótulo numa linha só em 360 (padding e corpo reduzidos, altura ≥56).
+   Combine com `block` abaixo de 480 quando a composição pedir. */
+@media (max-width: 479px) {
+  .lg {
+    gap: 0.45em;
+    padding: 0.75em 1em;
+    font-size: var(--fs-body);
+  }
+}
+
+.link.sm { font-size: var(--fs-small); }
+.link.md { font-size: var(--fs-body); }
+.link.lg { font-size: var(--fs-lead); }

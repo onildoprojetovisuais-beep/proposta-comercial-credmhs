@@ -1,0 +1,240 @@
+/*
+ * Tokens CRED MHS
+ * Origem de cada valor documentada em docs/STACK.md.
+ * [oficial]  = Brandbook Grupo CRED MHS 2021 (pp. 28, 29, 35, 53) ou arquivos de marca.
+ * [derivado] = decisão de implementação, não é regra da marca.
+ */
+
+/* Sommet Rounded — fonte primária oficial (brandbook p. 35).
+   Convertida de assets/brand/*.otf para woff2 sem alterar desenho.
+   Só os pesos usados: Light 300, Regular 400, Bold 700, Black 900. */
+@font-face {
+  font-family: 'Sommet Rounded';
+  src: url('/fonts/sommet-rounded-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sommet Rounded';
+  src: url('/fonts/sommet-rounded-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sommet Rounded';
+  src: url('/fonts/sommet-rounded-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sommet Rounded';
+  src: url('/fonts/sommet-rounded-black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- Cores oficiais (brandbook) ---------- */
+  --cred-yellow: #ffca00;        /* [oficial] primária, P 116 C */
+  --cred-black: #000000;         /* [oficial] primária, preto 100% */
+  --cred-white: #ffffff;         /* [oficial] p. 53 */
+  /* Auxiliares [oficial]: no máximo UMA por aplicação, só em detalhes de pequena área. */
+  --cred-aux-yellow-light: #ffd962; /* Pantone 120 C */
+  --cred-aux-blue: #009ee2;         /* Pantone 2925 C */
+  --cred-aux-navy: #0e1642;         /* Pantone 101 C (rótulo do brandbook) */
+  --cred-aux-coral: #ff334d;        /* Pantone 710 C */
+  --cred-aux-magenta: #b5115b;      /* Pantone 91-8 C */
+
+  /* ---------- Valores presentes nos arquivos de marca ---------- */
+  --cred-ink: #1e1d1d;           /* [oficial-arquivo] "CRED" em logo_nova.svg */
+  --cred-yellow-logo: #fec702;   /* [oficial-arquivo] sol/"MHS" em logo_nova.svg (referência; usar --cred-yellow) */
+
+  /* ---------- Neutros [derivado] ---------- */
+  /* V2 (rev. 2.1, §9): creme e amarelo claro deixam de ser superfície da apresentação pública.
+     --paper e --paper-strong ficam SÓ para o painel (/painel) e telas de estado, fora do escopo V2.
+     Nenhuma seção pública deve usá-los. */
+  --paper: #fffcf3;              /* [legado-painel] */
+  --paper-strong: #fff6d6;       /* [legado-painel] */
+  --gray-100: #f3f2ef;
+  /* Sobriedade: terceira superfície (cinza neutro claro) e cinza médio para apoio. */
+  --surface-gray: #ededed;
+  --gray-500: #6b6b6b;           /* apoio: 5,3:1 sobre branco, 4,7:1 sobre #EDEDED */
+  --gray-200: #e4e2dd;
+  --gray-400: #a8a59e;
+  --gray-600: #5c5a55;           /* texto secundário: 6.9:1 sobre --paper */
+  --gray-800: #333230;
+
+  /* ---------- Papéis semânticos [derivado] ---------- */
+  --color-bg: var(--cred-white);   /* V2: base branca; amarelo e preto alternam por seção */
+  --color-surface: var(--cred-white);
+  --color-surface-dark: var(--cred-ink);
+  --color-text: var(--cred-ink);
+  --color-text-muted: var(--gray-600);
+  --color-text-on-dark: var(--cred-white);
+  --color-text-muted-on-dark: #d6d4cf;
+  --color-accent: var(--cred-yellow);          /* preenchimentos, sublinhados, marcadores */
+  --color-accent-ink: var(--cred-ink);         /* texto sobre amarelo (≈12:1) */
+  --color-border: var(--gray-200);
+  --color-border-strong: var(--cred-ink);
+  /* Amarelo NÃO é cor de texto sobre fundo claro (contraste ≈1.6:1). */
+  --color-focus: var(--cred-ink);
+  --color-focus-ring: var(--cred-yellow);
+
+  /* ---------- Tipografia ---------- */
+  /* Fallback recomendado pelo brandbook para contextos sem a fonte: Calibri, Arial, Helvetica. */
+  --font-brand: 'Sommet Rounded', Calibri, Arial, Helvetica, sans-serif;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 900;   /* brandbook prefere "Heavy" para títulos; Heavy não foi fornecido → Black */
+
+  /* Escala V3 — rodada de SOBRIEDADE (20/10/2026, pedido do Nil; referência assets/referencia.jpg):
+     títulos contidos em Bold, 40–56 px no desktop; o maior tamanho fica só para os números.
+     Nomes antigos mantidos (painel/StatusScreen e outros agentes). */
+  --fs-mega: clamp(2.25rem, 1.55rem + 2.6vw, 3.5rem);        /* 36 → 56 */
+  --fs-display: clamp(2.125rem, 1.5rem + 2.3vw, 3.5rem);     /* 34 → 56 */
+  --fs-statement: clamp(1.75rem, 1.3rem + 1.8vw, 3rem);      /* 28 → 48: perguntas e frases */
+  --fs-h1: clamp(1.875rem, 1.4rem + 1.8vw, 3rem);            /* 30 → 48 */
+  --fs-h2: clamp(1.5rem, 1.25rem + 1vw, 2.25rem);            /* 24 → 36 */
+  --fs-h3: clamp(1.3125rem, 1.15rem + 0.6vw, 1.75rem);       /* 21 → 28 */
+  --fs-h4: clamp(1.1875rem, 1.1rem + 0.35vw, 1.4375rem);     /* 19 → 23 */
+  --fs-lead: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);     /* apoio 18 → 22 */
+  --fs-body: clamp(1.0625rem, 1.02rem + 0.22vw, 1.1875rem);  /* corpo 17 → 19 */
+  --fs-small: 1rem;                                          /* 16, metadados/legendas */
+  --fs-eyebrow: 1rem;                                        /* 16, caixa alta com tracking (bold) */
+  --fs-number: clamp(3.5rem, 1.6rem + 8vw, 9rem);            /* 56 → 144: números são o maior tamanho */
+
+  --lh-tight: 1.05;
+  --lh-heading: 1.12;
+  --lh-body: 1.6;
+  --lh-lead: 1.5;
+  --tracking-display: -0.015em;
+  --tracking-eyebrow: 0.18em;
+  --measure: 64ch;          /* largura confortável de leitura */
+  --measure-lead: 46ch;
+
+  /* ---------- Espaçamento (base 4/8) [derivado] ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2.5rem);
+  --section-pad-y: clamp(4rem, 2.5rem + 6vw, 9rem);
+  /* Layout v2: UM eixo para header, M01–M10 e footer (x=102 em 1440). */
+  --content-max: 82rem;     /* 1312px */
+  --content-wide: var(--content-max); /* alias legado — não há mais container largo */
+  /* Reserva do trilho lateral de navegação (≥1024): aplicada a TODO .container. */
+  --rail-reserve: 5rem;
+  --container: var(--content-max); /* alias pedido no contrato V3 */
+  /* Linha de base do símbolo (sol sobre a linha): traço de tinta recorrente na V3. */
+  --rule: 3px solid var(--cred-ink);
+  --rule-thin: 1px solid rgb(30 29 29 / 0.18);
+  --radius-xl: 4px;
+  /* Moldura amarela deslocada (assinatura da referência): espessura e deslocamento. */
+  --frame-w: 8px;
+  --frame-offset: clamp(10px, 1.4vw, 18px);
+
+  /* Cabeçalho de capítulo (SectionHeader) */
+  --header-gap: var(--space-4);                                  /* eyebrow→título e título→lead: 16px */
+  --header-to-content: clamp(var(--space-6), 4vw, var(--space-8)); /* cabeçalho→conteúdo: 32→64 */
+
+  /* ---------- Forma [derivado] ----------
+     Sommet Rounded e o sol do símbolo têm terminais arredondados → raios suaves. */
+  /* Sobriedade: geometria reta, raio mínimo (0–4 px). --radius-pill fica para o painel. */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-control: 2px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgb(30 29 29 / 0.08);
+  --shadow-md: 0 6px 20px -6px rgb(30 29 29 / 0.18);
+  --shadow-lg: 0 24px 60px -20px rgb(30 29 29 / 0.3);
+
+  /* ---------- Painéis: SÓ dois tipos [derivado] ----------
+     Leitura (.panel-read): fundo contrastante com a seção, sem borda, sem sombra.
+     Ação    (.panel-action): branco + borda + --shadow-md (folhas onde o visitante edita/envia).
+     Sobreposições (Dialog, menu "Conteúdo") usam --shadow-overlay. Nenhuma outra sombra. */
+  --panel-radius: var(--radius-lg);
+  --panel-pad: var(--space-5);        /* 480–767 (vertical também < 480) */
+  --panel-pad-sm: var(--space-4);     /* lateral < 480 */
+  --panel-pad-lg: var(--space-7);
+  --panel-read-bg: var(--gray-100);   /* V2: cinza neutro sobre branco; branco sobre amarelo (global.css) */
+  --panel-action-bg: var(--cred-white);
+  --panel-action-border: 1px solid var(--color-border);
+  --panel-action-shadow: var(--shadow-md);
+  --shadow-overlay: var(--shadow-lg);
+
+  /* ---------- Campos de formulário [derivado] (.field) ---------- */
+  --field-bg: var(--cred-white);
+  --field-border-color: var(--gray-600);   /* 6,9:1 sobre branco — WCAG 1.4.11 ≥3:1 */
+  --field-border: 2px solid var(--field-border-color);
+  --field-radius: var(--radius-md);
+  --field-h: 52px;
+  --field-pad: 0.75em 1em;
+
+  /* ---------- Semântica de estado [derivado] ----------
+     V2: não há mais seleção do visitante (pauta/prioridades retiradas). --state-selected-* fica
+     só para o painel (Editor.module.css). Na apresentação, o único estado é ABERTO (disclosure). */
+  --state-selected-bg: var(--paper-strong);      /* [legado-painel] */
+  --state-selected-bar: inset 6px 0 0 var(--cred-yellow); /* [legado-painel] */
+  --state-open-bg: var(--gray-100);
+  --state-open-bar: inset 4px 0 0 var(--cred-ink);
+  --state-hover-bg: var(--gray-200);       /* 1,27:1 sobre branco — perceptível; antes 1,03:1 */
+  --state-hover-bg-dark: rgb(255 255 255 / 0.1);
+
+  /* ---------- Controles ---------- */
+
+  --tap-min: 44px;
+  --focus-width: 3px;
+  --focus-offset: 3px;
+
+  /* ---------- Motion [derivado] ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-base: 260ms;
+  --dur-slow: 480ms;
+
+  /* ---------- Camadas ---------- */
+  --z-header: 50;
+  --z-nav: 60;
+  --z-dialog: 100;
+
+  --header-h: 64px; /* só telas de estado; a V3 não tem cabeçalho fixo */
+}
+
+/* Celular (< 600): escala contida (pedido do Nil, 20/10 — “muito grandão”). Corpo fica em 16 px
+   (mínimo de leitura), títulos descem um degrau e o respiro entre seções encurta. */
+@media (max-width: 599px) {
+  :root {
+    --fs-mega: 1.875rem;     /* 30 */
+    --fs-display: 1.875rem;  /* 30 */
+    --fs-statement: 1.5rem;  /* 24 */
+    --fs-h1: 1.75rem;        /* 28 */
+    --fs-h2: 1.375rem;       /* 22 */
+    --fs-h3: 1.1875rem;      /* 19 */
+    --fs-h4: 1.0625rem;      /* 17 */
+    --fs-lead: 1.0625rem;    /* 17 */
+    --fs-body: 1rem;         /* 16 */
+    --fs-number: 3rem;       /* 48 */
+    --lh-body: 1.55;
+    --section-pad-y: 3.5rem; /* 56 */
+    --gutter: 1.25rem;       /* 20 */
+  }
+}
+
+
+/* Breakpoints [derivado] — CSS não aceita var() em @media; usar estes valores literais:
+   --bp-sm: 480px | --bp-md: 768px | --bp-lg: 1024px | --bp-xl: 1280px | --bp-2xl: 1440px
+   V2: nenhuma seção usa sticky/pinning. */

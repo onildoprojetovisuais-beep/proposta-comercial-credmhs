@@ -1,0 +1,289 @@
+/* Abertura (slide 1). Primeira dobra: logo + saudação + apoio + CTA, sempre visíveis.
+   Tamanhos combinam vw e svh para caber de 320×568 a 1440×900 sem cortar o CTA. */
+.section {
+  overflow: clip;
+}
+
+.frame {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'tab'
+    'text'
+    'person';
+  row-gap: clamp(1.25rem, 4svh, 2.5rem);
+  padding-bottom: var(--space-8);
+}
+
+/* Logo direto sobre o amarelo, na versão do brandbook p. 39 (negativo sobre fundo da cor da marca). */
+.tab {
+  grid-area: tab;
+  justify-self: start;
+  padding-top: clamp(1.25rem, 4svh, 2.5rem);
+}
+
+.logo {
+  display: block;
+  width: clamp(220px, 24vw, 360px);
+  height: auto;
+}
+
+.text {
+  grid-area: text;
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  gap: clamp(0.75rem, 2.2svh, 1.5rem);
+  max-width: 40rem;
+}
+
+/* Saudação contida: Bold, caixa alta curta. Rodada 21/10: sem o traço de tinta acima. */
+.greeting {
+  /* 11cqi: “SOU SABRINA.” (preso pela tipografia sem órfã) sempre cabe na coluna. */
+  font-size: min(clamp(2.375rem, min(9vw, 5svh + 3vw), 4.5rem), 11cqi);
+  font-weight: var(--fw-bold);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: clamp(1.0625rem, 0.9rem + 0.65vw, 1.4375rem);
+  font-weight: var(--fw-bold);
+  line-height: 1.35;
+  max-width: 32ch;
+}
+
+.body {
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  max-width: 44ch;
+}
+
+.cta {
+  padding-top: clamp(0.25rem, 1svh, 0.75rem);
+}
+
+/* Painel cinza claro (bloco justaposto ao amarelo): no celular, faixa atrás do retrato. */
+.panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--person-band, 0px);
+  background: var(--surface-gray);
+}
+
+.person {
+  grid-area: person;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
+  align-items: end;
+  column-gap: var(--space-6);
+  padding-block: var(--space-6) 0;
+}
+
+.portrait {
+  margin-right: var(--frame-offset);
+  margin-bottom: var(--frame-offset);
+}
+
+.arch {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--cred-white);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+}
+
+.monogram {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: var(--fw-bold);
+  color: var(--cred-ink);
+}
+
+/* Nome e cargo num bloco pontual de tinta (o preto aparece pequeno, ao lado do amarelo). */
+.caption {
+  display: grid;
+  gap: 0.125rem;
+  justify-self: start;
+  padding: var(--space-4) var(--space-5);
+  background: var(--cred-ink);
+  color: var(--cred-white);
+}
+
+.name {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+}
+
+.role {
+  font-size: var(--fs-body);
+  line-height: 1.35;
+}
+
+/* Celular e tablet: o retrato abre a página logo abaixo do logo, sangrando até a borda
+   direita, com o nome sobreposto no canto. Saudação, apoio e CTA vêm em seguida e
+   continuam na primeira dobra (altura do retrato em svh). */
+@media (max-width: 959px) {
+  .frame {
+    grid-template-areas:
+      'tab'
+      'person'
+      'text';
+    row-gap: clamp(1rem, 2.6svh, 1.75rem);
+    padding-bottom: clamp(2rem, 6svh, 3.5rem);
+  }
+
+  .tab {
+    padding-top: clamp(1rem, 2.6svh, 1.75rem);
+  }
+
+  .logo {
+    width: clamp(160px, 44vw, 240px);
+  }
+
+  .person {
+    display: block;
+    margin-right: calc(-1 * var(--gutter));
+    padding: 0;
+  }
+
+  .portrait {
+    margin: 0;
+  }
+
+  /* Moldura amarela some sobre o amarelo; o recorte em sangria faz o papel dela. */
+  .portrait::before {
+    display: none;
+  }
+
+  .arch {
+    aspect-ratio: auto;
+    height: clamp(13rem, 38svh, 26rem);
+  }
+
+  .photo {
+    object-position: 50% 20%;
+  }
+
+  .caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .name {
+    font-size: 1.125rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .text {
+    gap: clamp(0.625rem, 1.8svh, 1.25rem);
+  }
+
+  .greeting {
+    padding-top: clamp(0.625rem, 1.6svh, 1rem);
+  }
+}
+
+/* Tablet em pé: retrato mais alto, já que sobra largura. */
+@media (min-width: 600px) and (max-width: 959px) {
+  .arch {
+    height: clamp(16rem, 40svh, 30rem);
+  }
+}
+
+/* ≥960: duas colunas; painel cinza à direita na altura inteira da dobra. */
+@media (min-width: 960px) {
+  .section {
+    position: relative;
+    min-height: 100svh;
+    display: grid;
+  }
+
+  .panel {
+    top: 0;
+    left: auto;
+    width: 38%;
+    height: auto;
+  }
+
+  .frame {
+    position: relative;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      'tab tab'
+      'text person';
+    column-gap: var(--space-7);
+    padding-bottom: clamp(2rem, 6svh, 4rem);
+  }
+
+  .person {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    align-self: center;
+    padding: 0;
+  }
+
+  .portrait {
+    width: min(100%, calc(min(60svh, 600px) * 0.8));
+  }
+
+  .caption {
+    justify-self: center;
+    margin-top: calc(-1 * var(--space-7));
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12%);
+  }
+}
+
+@media (min-width: 960px) and (max-height: 800px) {
+  .portrait {
+    width: min(100%, calc(54svh * 0.8));
+  }
+}
+
+/* Telas baixas (≤ 640 de altura, ex.: 320×568): retrato mais curto para o CTA não sair da dobra. */
+@media (max-width: 959px) and (max-height: 640px) {
+  .arch {
+    height: clamp(8.5rem, 26svh, 13rem);
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  /* Etiqueta só com o nome (o cargo segue no contato) para não cobrir o rosto. */
+  .caption {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .role {
+    display: none;
+  }
+
+  .photo {
+    object-position: 50% 26%;
+  }
+}

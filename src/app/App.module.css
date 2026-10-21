@@ -1,0 +1,78 @@
+.main:focus {
+  outline: none;
+}
+
+/* Rodapé preto (tinta da marca): diferencia o fim da página. Logo negativo, ícones e assinatura. */
+.footer {
+  background: var(--cred-ink);
+  color: var(--cred-white);
+}
+
+.footerInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-6);
+  padding-block: var(--space-8) var(--space-7);
+}
+
+.logo {
+  width: 170px;
+  height: auto;
+  margin-right: auto;
+}
+
+.social {
+  display: flex;
+  gap: var(--space-2);
+  order: 2;
+}
+
+.socialLink {
+  display: inline-grid;
+  place-items: center;
+  width: max(var(--tap-min), 48px);
+  height: max(var(--tap-min), 48px);
+  font-size: 1.5rem;
+  color: var(--cred-white);
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.socialLink:hover {
+  background: var(--cred-yellow);
+  color: var(--cred-ink);
+}
+
+.socialLink:focus-visible {
+  outline: 3px solid var(--cred-yellow);
+  outline-offset: 2px;
+}
+
+.tagline {
+  order: 1;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--cred-yellow);
+}
+
+.credit {
+  order: 3;
+  flex-basis: 100%;
+  font-size: var(--fs-small);
+  color: var(--gray-400);
+}
+
+/* Celular: logo e ícones na mesma linha; assinatura e crédito abaixo. */
+@media (max-width: 767px) {
+  .social {
+    order: 1;
+    margin-right: -12px;
+  }
+
+  .tagline {
+    order: 2;
+    flex-basis: 100%;
+  }
+}

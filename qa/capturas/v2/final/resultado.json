@@ -1,0 +1,312 @@
+[
+  {
+    "name": "[1440] seções na ordem",
+    "pass": true,
+    "info": "abertura,institucional,relacionamento,dados,gestao-integrada,trilha,solucoes,contato"
+  },
+  {
+    "name": "[1440] sem overflow horizontal",
+    "pass": true,
+    "info": "excesso 0px"
+  },
+  {
+    "name": "[1440] nenhum elemento fora da viewport",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[1440] texto ≥ 16px",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[1440] sem termos proibidos/fluxo antigo",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[1440] sem erros de console",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "trilha: 5 itens <ol>",
+    "pass": true,
+    "info": "01 | 01 Normativo  Atender às exigências que fazem parte da operação. || 02 | 02 Reputacional  Fortalecer a percepção de um ambiente de trabalho saudável e seguro. || 03 | 03 Gestão  Organizar informações para acompanhar a operação e apoiar decisões. || 04 | 04 Inovação  Transformar ações implementadas em valor para a empresa e as pessoas. || 05 | 05 Investimento  Direcionar recursos com intenção, dados e visão de negócio."
+  },
+  {
+    "name": "trilha: ordem correta",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "soluções: 4 eixos visíveis",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "soluções: sem \"Investimento\" como eixo",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "soluções: nota de escopo",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "institucional: 4 números",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "institucional: logos carregados",
+    "pass": true,
+    "info": "8"
+  },
+  {
+    "name": "contato: mailto sem corpo",
+    "pass": true,
+    "info": "mailto:sabrina.ferreira@credmhs.com.br?subject=Conversa%20sobre%20a%20CRED%C2%A0MHS tel:+5521988967369 https://www.linkedin.com/in/sabrinaferreira https://www.credmhs.com.br"
+  },
+  {
+    "name": "contato: sem wa.me (não confirmado)",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "contato: tel E.164",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "contato: sem \"Agendar\" (sem booking)",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "abertura: Olá, sou Sabrina.",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "abertura: cargo",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "abertura: foto carregada com alt",
+    "pass": true,
+    "info": "{\"ok\":true,\"alt\":\"Retrato de Sabrina Ferreira, Executiva de Negócios da CRED MHS\"}"
+  },
+  {
+    "name": "CTA \"Vamos começar\" leva à institucional",
+    "pass": true,
+    "info": "top=64"
+  },
+  {
+    "name": "teclado: primeiro Tab = skip link",
+    "pass": true,
+    "info": "Pular para o conteúdo"
+  },
+  {
+    "name": "hash #trilha posiciona em #trilha",
+    "pass": true,
+    "info": "top=64"
+  },
+  {
+    "name": "hash #m05 posiciona em #solucoes",
+    "pass": true,
+    "info": "top=64"
+  },
+  {
+    "name": "hash #m10 posiciona em #contato",
+    "pass": true,
+    "info": "top=64"
+  },
+  {
+    "name": "reduced-motion: nenhum texto invisível sem rolar",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[768] seções na ordem",
+    "pass": true,
+    "info": "abertura,institucional,relacionamento,dados,gestao-integrada,trilha,solucoes,contato"
+  },
+  {
+    "name": "[768] sem overflow horizontal",
+    "pass": true,
+    "info": "excesso 0px"
+  },
+  {
+    "name": "[768] nenhum elemento fora da viewport",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[768] texto ≥ 16px",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[768] sem termos proibidos/fluxo antigo",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[768] sem erros de console",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[390] seções na ordem",
+    "pass": true,
+    "info": "abertura,institucional,relacionamento,dados,gestao-integrada,trilha,solucoes,contato"
+  },
+  {
+    "name": "[390] sem overflow horizontal",
+    "pass": true,
+    "info": "excesso 0px"
+  },
+  {
+    "name": "[390] nenhum elemento fora da viewport",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[390] texto ≥ 16px",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[390] sem termos proibidos/fluxo antigo",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[390] sem erros de console",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[320] seções na ordem",
+    "pass": true,
+    "info": "abertura,institucional,relacionamento,dados,gestao-integrada,trilha,solucoes,contato"
+  },
+  {
+    "name": "[320] sem overflow horizontal",
+    "pass": true,
+    "info": "excesso 0px"
+  },
+  {
+    "name": "[320] nenhum elemento fora da viewport",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[320] texto ≥ 16px",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[320] sem termos proibidos/fluxo antigo",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "[320] sem erros de console",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "sessionStorage vazio na V2",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "perfil (padrão): abertura com Sabrina",
+    "pass": true,
+    "info": "Sabrina Ferreira\nExecutiva de Negócios · CRED MHS\n\nOlá, sou Sabrina.\n\nVou te mos"
+  },
+  {
+    "name": "perfil (padrão): contato com e-mail correto",
+    "pass": true,
+    "info": "mailto:sabrina.ferreira@credmhs.com.br?subject=Conversa%20sobre%20a%20CRED%C2%A0MHS tel:+5521988967369 https://www.linkedin.com/in/sabrinaferreira https://www.credmhs.com.br/"
+  },
+  {
+    "name": "perfil (padrão): sem dados do outro executivo",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "perfil ?executivo=sabrina-ferreira: abertura com Sabrina",
+    "pass": true,
+    "info": "Sabrina Ferreira\nExecutiva de Negócios · CRED MHS\n\nOlá, sou Sabrina.\n\nVou te mos"
+  },
+  {
+    "name": "perfil ?executivo=sabrina-ferreira: contato com e-mail correto",
+    "pass": true,
+    "info": "mailto:sabrina.ferreira@credmhs.com.br?subject=Conversa%20sobre%20a%20CRED%C2%A0MHS tel:+5521988967369 https://www.linkedin.com/in/sabrinaferreira https://www.credmhs.com.br/"
+  },
+  {
+    "name": "perfil ?executivo=sabrina-ferreira: sem dados do outro executivo",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "perfil ?executivo=teste-carlos: abertura com Carlos",
+    "pass": true,
+    "info": "Olá, sou Carlos.\n\nVou te mostrar como a CRED MHS pode apoiar a gestão de saúde e"
+  },
+  {
+    "name": "perfil ?executivo=teste-carlos: contato com e-mail correto",
+    "pass": true,
+    "info": "mailto:carlos.teste@example.com?subject=Conversa%20sobre%20a%20CRED%C2%A0MHS tel:+5511900000000 https://www.credmhs.com.br/"
+  },
+  {
+    "name": "perfil ?executivo=teste-carlos: sem dados do outro executivo",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "perfil teste-carlos: sem LinkedIn (null)",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "perfil inexistente: mensagem correta",
+    "pass": true,
+    "info": "APRESENTAÇÃO CRED MHS  Não encontramos esta apresentação O link pode estar incompleto ou ter alguma "
+  },
+  {
+    "name": "perfil inexistente: não mostra Sabrina",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "perfil desativado: mensagem correta",
+    "pass": true,
+    "info": "APRESENTAÇÃO CRED MHS  Esta apresentação não está disponível no momento O endereço está correto, mas"
+  },
+  {
+    "name": "perfil desativado: não mostra Sabrina",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "perfil inválido: mensagem correta",
+    "pass": true,
+    "info": "APRESENTAÇÃO CRED MHS  Não encontramos esta apresentação O link pode estar incompleto ou ter alguma "
+  },
+  {
+    "name": "perfil inválido: não mostra Sabrina",
+    "pass": true,
+    "info": ""
+  },
+  {
+    "name": "painel /painel/ renderiza login",
+    "pass": true,
+    "info": "Pular para o conteúdo Painel do executivo  PAINEL DO EXECUTIVO  Seu perfil na ap"
+  }
+]

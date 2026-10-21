@@ -1,0 +1,34 @@
+.section {
+  position: relative;
+  scroll-margin-top: 0; /* o html já reserva o header (scroll-padding-top) */
+}
+
+.section:focus {
+  outline: none;
+}
+
+/* Padding vertical ÚNICO: 64px (mobile) → ~126px (1440) → 144px. */
+.spacing-default {
+  padding-block: var(--section-pad-y);
+}
+
+.spacing-none {
+  padding-block: 0;
+}
+
+/* Superfícies */
+.white {
+  background: var(--cred-white);
+  color: var(--color-text);
+}
+
+/* Escuro em tinta (#1E1D1D), só em provocacao e atuacao-integrada (pedido do Nil, slides 2 e 4). */
+.dark {
+  background: var(--cred-ink);
+  color: var(--color-text-on-dark);
+}
+
+.yellow {
+  background: var(--cred-yellow);
+  color: var(--cred-ink);
+}

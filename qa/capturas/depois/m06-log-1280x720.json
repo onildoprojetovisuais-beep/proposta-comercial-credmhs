@@ -1,0 +1,212 @@
+[
+ {
+  "scrollY": 5384,
+  "video": {
+   "t": 0,
+   "paused": true,
+   "ended": false
+  },
+  "stageTop": 785,
+  "active": [
+   "Acompanhamento",
+   "01AcompanhamentoUm portal de s"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 5563,
+  "video": {
+   "t": 0,
+   "paused": true,
+   "ended": false
+  },
+  "stageTop": 606,
+  "active": [
+   "Acompanhamento",
+   "01AcompanhamentoUm portal de s"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 5743,
+  "video": {
+   "t": 0,
+   "paused": true,
+   "ended": false
+  },
+  "stageTop": 426,
+  "active": [
+   "Acompanhamento",
+   "01AcompanhamentoUm portal de s"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 5922,
+  "video": {
+   "t": 0.68,
+   "paused": false,
+   "ended": false
+  },
+  "stageTop": 247,
+  "active": [
+   "Acompanhamento",
+   "01AcompanhamentoUm portal de s"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 6102,
+  "video": {
+   "t": 1.39,
+   "paused": false,
+   "ended": false
+  },
+  "stageTop": 67,
+  "active": [
+   "Acompanhamento",
+   "01AcompanhamentoUm portal de s"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 6281,
+  "video": {
+   "t": 2.16,
+   "paused": false,
+   "ended": false
+  },
+  "stageTop": 64,
+  "active": [
+   "Acompanhamento",
+   "01AcompanhamentoUm portal de s"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 6460,
+  "video": {
+   "t": 2.88,
+   "paused": false,
+   "ended": false
+  },
+  "stageTop": 64,
+  "active": [
+   "Acompanhamento",
+   "01AcompanhamentoUm portal de s"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 6640,
+  "video": {
+   "t": 3.64,
+   "paused": false,
+   "ended": false
+  },
+  "stageTop": 64,
+  "active": [
+   "Integra\u00e7\u00e3o",
+   "02Integra\u00e7\u00e3oRecursos de conex\u00e3"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 6819,
+  "video": {
+   "t": 4.36,
+   "paused": false,
+   "ended": false
+  },
+  "stageTop": 64,
+  "active": [
+   "Integra\u00e7\u00e3o",
+   "02Integra\u00e7\u00e3oRecursos de conex\u00e3"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 6999,
+  "video": {
+   "t": 5.13,
+   "paused": false,
+   "ended": false
+  },
+  "stageTop": 64,
+  "active": [
+   "Informa\u00e7\u00e3o gerencial",
+   "03Informa\u00e7\u00e3o gerencialCustomiz"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 7178,
+  "video": {
+   "t": 5.84,
+   "paused": false,
+   "ended": false
+  },
+  "stageTop": 64,
+  "active": [
+   "Informa\u00e7\u00e3o gerencial",
+   "03Informa\u00e7\u00e3o gerencialCustomiz"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 7358,
+  "video": {
+   "t": 6.61,
+   "paused": false,
+   "ended": false
+  },
+  "stageTop": -45,
+  "active": [
+   "Informa\u00e7\u00e3o gerencial",
+   "03Informa\u00e7\u00e3o gerencialCustomiz"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 7537,
+  "video": {
+   "t": 7,
+   "paused": true,
+   "ended": true
+  },
+  "stageTop": -224,
+  "active": [
+   "Informa\u00e7\u00e3o gerencial",
+   "03Informa\u00e7\u00e3o gerencialCustomiz"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 7716,
+  "video": {
+   "t": 7,
+   "paused": true,
+   "ended": true
+  },
+  "stageTop": -403,
+  "active": [
+   "Informa\u00e7\u00e3o gerencial",
+   "03Informa\u00e7\u00e3o gerencialCustomiz"
+  ],
+  "railLeft": 1100
+ },
+ {
+  "scrollY": 7896,
+  "video": {
+   "t": 7,
+   "paused": true,
+   "ended": true
+  },
+  "stageTop": -583,
+  "active": [
+   "Informa\u00e7\u00e3o gerencial",
+   "03Informa\u00e7\u00e3o gerencialCustomiz"
+  ],
+  "railLeft": 1100
+ }
+]

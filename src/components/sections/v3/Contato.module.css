@@ -1,0 +1,212 @@
+.section {
+  overflow: clip;
+}
+
+/* Duas colunas de texto livre sobre o branco; sem caixas, painéis ou divisórias. */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(3rem, 7vw, 5rem);
+  align-items: start;
+}
+
+.main {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+  align-content: start;
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+/* Título com presença; “a nossa conversa?” inseparável (typeset) fecha a segunda linha. */
+.title {
+  font-size: min(calc(var(--fs-display) * 1.35), 9.5cqi);
+  font-weight: var(--fw-bold);
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  max-width: 14ch;
+  text-wrap: balance;
+}
+
+.body {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  line-height: 1.4;
+  max-width: 32ch;
+}
+
+/* Etapas como linha tipográfica (texto, não botões): “Aprofundar na sua demanda → Detalhar o escopo”.
+   A seta discreta fica presa à segunda etapa e nunca abre/fecha linha sozinha. */
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35em 0.75em;
+  margin-top: var(--space-2);
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-bold);
+  line-height: 1.35;
+}
+
+.step {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.75em;
+  white-space: nowrap;
+}
+
+.arrow {
+  color: var(--gray-500);
+  font-weight: var(--fw-bold);
+}
+
+/* Contato do executivo: texto flutuante, retrato retangular simples. */
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  justify-items: start;
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.person {
+  display: grid;
+  grid-template-columns: clamp(6rem, 22vw, 10rem) minmax(0, 1fr);
+  align-items: end;
+  column-gap: clamp(1rem, 3vw, 1.75rem);
+}
+
+.personNoPhoto {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.portrait {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--surface-gray);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+}
+
+.identity {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.name {
+  font-size: var(--fs-h3);
+  text-wrap: balance;
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+}
+
+.role {
+  display: grid;
+  font-size: var(--fs-body);
+  line-height: 1.35;
+  color: var(--gray-500);
+}
+
+.brand {
+  font-weight: var(--fw-bold);
+}
+
+/* Telefone e e-mail: o próprio dado é a ação (tel: / mailto:), uma vez cada. */
+.channels {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+}
+
+.channel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  min-height: var(--tap-min);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+  text-decoration-line: underline;
+  text-decoration-color: var(--cred-yellow);
+  text-decoration-thickness: 4px;
+  text-underline-offset: 0.22em;
+}
+
+.channel:hover {
+  text-decoration-color: var(--cred-ink);
+}
+
+.email {
+  overflow-wrap: anywhere;
+  font-size: clamp(1.0625rem, 0.8rem + 1.1vw, 1.5rem);
+}
+
+.channelIcon {
+  flex: none;
+  width: 1em;
+  height: 1em;
+}
+
+/* WhatsApp (se confirmado), LinkedIn e site: só ícones, nome acessível no aria-label. */
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-left: -10px;
+}
+
+.iconLink {
+  display: inline-grid;
+  place-items: center;
+  width: max(var(--tap-min), 48px);
+  height: max(var(--tap-min), 48px);
+  font-size: 1.625rem;
+  color: var(--cred-ink);
+  transition: background-color 160ms ease;
+}
+
+.iconLink:hover {
+  background: var(--cred-yellow);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+
+  .contact {
+    padding-top: 0.5rem;
+  }
+}
+
+/* Tablet largo: retrato menor para nome e e-mail caberem em uma linha. */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .person {
+    grid-template-columns: 8rem minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .title {
+    font-size: min(calc(var(--fs-display) * 1.25), 11cqi);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iconLink {
+    transition: none;
+  }
+}

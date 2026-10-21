@@ -1,0 +1,337 @@
+/* Depoimentos (sobriedade): cabeçalho à esquerda e citação editorial à direita. */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem) var(--space-8);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: var(--space-4);
+}
+
+/* Rodada 21/10: rótulo sem o traço amarelo antes. */
+.eyebrow {
+  display: block;
+}
+
+.title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  line-height: 1.1;
+  max-width: 16ch;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+}
+
+.item {
+  position: relative;
+}
+
+/* Citação: aspas num quadrado amarelo, régua de tinta à esquerda dos parágrafos. */
+.figure {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+}
+
+.mark {
+  display: inline-grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--cred-yellow);
+  color: var(--cred-ink);
+  font-size: 4rem;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  padding-top: 1.6rem;
+}
+
+.quote {
+  margin: 0;
+  display: grid;
+  gap: var(--space-5);
+  padding-left: var(--space-5);
+  border-left: 3px solid var(--cred-yellow);
+  font-size: var(--fs-lead);
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.by {
+  display: grid;
+  gap: 0.125rem;
+  padding-left: calc(var(--space-5) + 3px);
+}
+
+.name {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+}
+
+.role {
+  font-size: var(--fs-body);
+  color: var(--gray-500);
+}
+
+.sector {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+}
+
+/* Espaços reservados (só revisão, sem depoimento aprovado). */
+.slot {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  min-height: 12rem;
+  padding: var(--space-6) var(--space-5);
+  border: 2px dashed rgb(30 29 29 / 0.45);
+}
+
+.slot .sector {
+  font-size: var(--fs-h3);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@media (min-width: 900px) {
+  .slots {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 1280px) {
+  .layout {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  }
+}
+
+.quote p {
+  text-wrap: pretty;
+}
+
+/* Celular: aspas menores e mais próximas do texto; régua mais perto da margem. */
+@media (max-width: 599px) {
+  .figure {
+    gap: var(--space-4);
+  }
+
+  .mark {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 3rem;
+    padding-top: 1.2rem;
+  }
+
+  .quote {
+    padding-left: var(--space-4);
+  }
+
+  .by {
+    padding-left: calc(var(--space-4) + 3px);
+  }
+}
+
+/* ---------- Carrossel (2+ depoimentos): mesmo padrão do carrossel de marcas ---------- */
+.carousel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+.track {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.track:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .track {
+    scroll-behavior: smooth;
+    transition: height 360ms var(--ease-out);
+  }
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  /* Respiro à direita: a régua do slide seguinte não encosta no texto durante o deslize. */
+  padding-right: var(--space-5);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.rail {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 4px;
+}
+
+.rail::before {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: var(--gray-200);
+}
+
+.thumb {
+  position: absolute;
+  top: 0;
+  left: calc(var(--thumb-offset, 0) * 100%);
+  width: calc(var(--thumb-size, 1) * 100%);
+  height: 4px;
+  background: var(--cred-yellow);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .thumb {
+    transition: left 280ms var(--ease-out);
+  }
+}
+
+.counter {
+  flex: none;
+  margin: 0;
+  min-width: 3.5ch;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+.arrows {
+  flex: none;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  min-width: var(--tap-min);
+  min-height: var(--tap-min);
+  padding: 0;
+  border: 2px solid var(--cred-ink);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--cred-ink);
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.next {
+  border-color: var(--cred-yellow);
+  background: var(--cred-yellow);
+}
+
+.arrow:not([aria-disabled='true']):hover {
+  border-color: var(--cred-ink);
+  background: var(--cred-ink);
+  color: var(--cred-yellow);
+}
+
+.arrow[aria-disabled='true'] {
+  border-color: var(--surface-gray);
+  background: var(--surface-gray);
+  color: var(--gray-400);
+  cursor: default;
+}
+
+@media (max-width: 479px) {
+  .controls {
+    gap: var(--space-4);
+  }
+
+  .slide {
+    padding-right: var(--space-3);
+  }
+}
+
+/* Celular: depoimento longo recolhido em ~9 linhas, com esmaecimento e botão para abrir. */
+.quote[data-collapsed] {
+  max-height: calc(1.6em * 9);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent);
+  mask-image: linear-gradient(to bottom, #000 62%, transparent);
+}
+
+.more {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap-min);
+  margin-left: calc(var(--space-4) + 3px);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--cred-ink);
+  font: inherit;
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+  text-decoration-color: var(--cred-yellow);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.3em;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.more:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+.moreIcon {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 220ms var(--ease-out);
+}
+
+.more[aria-expanded='true'] .moreIcon {
+  transform: translateY(2px) rotate(-135deg);
+}

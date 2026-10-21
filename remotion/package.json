@@ -1,0 +1,21 @@
+{
+  "name": "cred-mhs-remotion",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Composições Remotion da apresentação CRED MHS (V3: mapa da seção Alcance) — projeto isolado da app.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "still:mapa": "remotion still src/index.ts MapaBrasil out/mapa/mapa-final.png --frame 224 --concurrency=1 --overwrite",
+    "render:mapa": "remotion render src/index.ts MapaBrasil out/mapa/mapa-referencia.mp4 --codec h264 --crf 21 --pixel-format yuv420p --color-space bt709 --muted --concurrency=1 --overwrite"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}

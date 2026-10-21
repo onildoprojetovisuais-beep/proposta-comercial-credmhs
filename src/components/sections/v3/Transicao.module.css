@@ -1,0 +1,64 @@
+/* Plano amarelo de tela cheia: só tipografia e espaço (sem foto, sem traço). */
+.section {
+  display: grid;
+  overflow: clip;
+  min-height: min(100svh, 60rem);
+}
+
+.grid {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-block: var(--section-pad-y);
+}
+
+.lead {
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-bold);
+  line-height: 1.35;
+  max-width: 32ch;
+}
+
+.question {
+  font-size: clamp(1.875rem, 1rem + 3.4vw, 4.25rem);
+  font-weight: var(--fw-black);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  max-width: 21ch;
+}
+
+/* “Como entregamos”: entrada mais leve; o bloco enfático começa em “mais gestão”. */
+.before {
+  display: block;
+  margin-bottom: 0.1em;
+  font-size: 0.62em;
+  font-weight: var(--fw-regular);
+  letter-spacing: -0.015em;
+}
+
+/* “mais gestão”: o pico da frase, em escala de cartaz — ênfase só tipográfica (sem faixa). */
+.emphasis {
+  display: block;
+  font-size: min(2.35em, 17cqi);
+  font-weight: var(--fw-black);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+}
+
+/* “de saúde e segurança do trabalho para a sua empresa?”: mesmo peso Black, acompanha o pico. */
+.rest {
+  display: block;
+  margin-top: 0.12em;
+}
+
+@media (max-width: 599px) {
+  .section {
+    min-height: min(100svh, 44rem);
+  }
+
+  .emphasis {
+    font-size: 18cqi;
+  }
+}

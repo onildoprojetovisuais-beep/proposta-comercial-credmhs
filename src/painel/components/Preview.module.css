@@ -1,0 +1,182 @@
+.preview {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.head {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.headNote {
+  font-size: var(--fs-small);
+  line-height: 1.45;
+  color: var(--color-text-muted);
+  max-width: 40ch;
+}
+
+.tag {
+  font-size: 0.875rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--gray-600);
+}
+
+/* ---------- Abertura (M01) ---------- */
+.opening {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: var(--panel-radius);
+  background: var(--cred-white);
+  border: 1px solid var(--color-border);
+}
+
+.openingGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 6.5rem;
+  gap: var(--space-4);
+  align-items: end;
+}
+
+.portrait {
+  position: relative;
+  isolation: isolate;
+  order: 2;
+}
+
+.sun {
+  position: absolute;
+  z-index: -1;
+  top: -0.9rem;
+  right: -1.4rem;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--cred-yellow);
+}
+
+.photo,
+.placeholder {
+  width: 100%;
+  aspect-ratio: 1098 / 1433;
+  object-fit: cover;
+  object-position: 50% 12%;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  border-bottom: 3px solid var(--cred-ink);
+  background: var(--paper-strong);
+}
+
+.placeholder {
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+  font-weight: var(--fw-black);
+  background: var(--gray-100);
+}
+
+.openingText {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding-bottom: var(--space-2);
+}
+
+.identity {
+  display: grid;
+  gap: 0.1rem;
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+.name {
+  font-weight: var(--fw-bold);
+  overflow-wrap: anywhere;
+}
+
+.role {
+  color: var(--color-text-muted);
+  overflow-wrap: anywhere;
+}
+
+.title {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Contato (M10) ---------- */
+.contact {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border-radius: var(--panel-radius);
+  background: var(--cred-ink);
+  color: var(--cred-white);
+}
+
+.contact .tag {
+  color: var(--color-text-muted-on-dark);
+}
+
+.contactTitle {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-black);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.fakeCta {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.45em 1.1em;
+  border-radius: var(--radius-pill);
+  background: var(--cred-yellow);
+  color: var(--cred-ink);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.contactList {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+  padding-top: var(--space-3);
+  border-top: 1px solid rgb(255 255 255 / 0.2);
+}
+
+.contactList div {
+  display: grid;
+  gap: 0;
+}
+
+.contactList dt {
+  font-size: 0.875rem;
+  color: var(--color-text-muted-on-dark);
+}
+
+.contactList dd {
+  margin: 0;
+  font-weight: var(--fw-bold);
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .preview {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+  .head {
+    grid-column: 1 / -1;
+  }
+}

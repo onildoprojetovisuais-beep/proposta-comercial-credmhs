@@ -1,0 +1,120 @@
+===== SLIDE 1
+   OLÁ, SOU SABRINA.
+   Vim te mostrar como a CRED MHS pode entregar mais gestão para a saúde e segurança do trabalho da sua empresa.
+   Quero te conhecer, mapear os desafios que temos e oferecer solução, sob medida, para o negócio — e acompanhar essa evolução.
+   Foto do
+   executivo
+   Sabrina Ferreira
+   Executiva de Negócios · CRED MHS
+   [rels] ['../media/image-1-1.png', '../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide1.xml']
+===== SLIDE 2
+   O que a sua empresa consegue gerir com os serviços que já possui?
+   Exames, laudos e programas só geram valor quando viram informação para decidir.
+   É AÍ QUE COMEÇA A NOSSA CONVERSA.
+   [rels] ['../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide2.xml']
+===== SLIDE 3
+   Mas antes disso, deixa eu te contar um pouco mais sobre
+   QUEM SOMOS.
+   CRESCEMOS AO LONGO DE 35 ANOS EM PARCERIA COM OS NOSSOS CLIENTES.
+   Nascemos em Minas Gerais. Estamos no Rio de Janeiro desde 2008 e, desde 2018, com rede própria — hoje com duas unidades: Barra e Centro.
+   ATUAÇÃO NACIONAL
+   EXPERIÊNCIA MULTISSETORIAL
+   100% DIGITAL
+   UNIDADE
+   BARRA
+   UNIDADE
+   CENTRO
+   MISSÃO
+   Prover a implantação da Gestão de Saúde e Segurança do Trabalho como uma força estratégica, para melhor apoiar os negócios do cliente e para o setor.
+   VISÃO
+   Ser a melhor referência em gestão de saúde e segurança do trabalho do cliente e para o setor.
+   VALORES
+   Ética e transparência no relacionamento com clientes, colaboradores, fornecedores e a sociedade.
+   Compromisso contínuo com a qualidade.
+   Capacitação profissional técnica e humana, permanente e multidisciplinar.
+   Inovação para buscar soluções criativas e tecnológicas.
+   [rels] ['../media/image-3-1.png', '../media/image-3-2.png', '../media/image-3-3.png', '../media/image-3-4.jpeg', '../media/image-3-5.jpeg', '../media/image-3-6.jpeg', '../media/image-3-7.jpeg', '../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide3.xml']
+===== SLIDE 4
+   NOSSO DIFERENCIAL ESTRATÉGICO
+   UMA ATUAÇÃO INTEGRADA.
+   Saúde corporativa, segurança do trabalho, higiene ocupacional, gestão estratégica, tecnologia da informação e pessoas trabalhando juntas, potencializando a curva de aprendizagem do seu negócio, com uma equipe multidisciplinar.
+   E um executivo de negócios que acompanha e gerencia todo esse projeto.
+   [rels] ['../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide4.xml']
+===== SLIDE 5
+   REDE PRÓPRIA BARRA · CENTRO
+   NOSSA FORÇA ESTÁ ONDE VOCÊ ESTIVER.
+   +550mil
+   vidas gerenciadas
+   +5mil
+   clientes em todo o território nacional
+   [rels] ['../media/image-5-1.png', '../media/image-5-2.png', '../media/image-5-3.png', '../media/image-5-4.png', '../media/image-5-5.png', '../media/image-5-6.png', '../media/image-5-7.png', '../media/image-5-8.png', '../media/image-5-9.png', '../media/image-5-10.png', '../media/image-5-11.png', '../media/image-5-12.png', '../media/image-5-13.png', '../media/image-5-14.png', '../media/image-5-15.png', '../media/image-5-16.png', '../media/image-5-17.png', '../media/image-5-18.png', '../media/image-5-19.png', '../media/image-5-20.png', '../media/image-5-21.png', '../media/image-5-22.png', '../media/image-5-23.png', '../media/image-5-24.png', '../media/image-5-25.png', '../media/image-5-26.png', '../media/image-5-27.png', '../media/image-5-28.png', '../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide5.xml']
+===== SLIDE 6
+   QUEM SOMOS · CLIENTES
+   O QUE NOSSOS CLIENTES FALAM SOBRE NÓS
+   “
+   [Depoimento a selecionar]
+   [Nome, cargo]
+   Banco
+   “
+   [Depoimento a selecionar]
+   [Nome, cargo]
+   Hotelaria
+   “
+   [Depoimento a selecionar]
+   [Nome, cargo]
+   Restaurante
+   [rels] ['../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide6.xml']
+===== SLIDE 7
+   COMO OS FUNCIONÁRIOS DOS NOSSOS CLIENTES AVALIAM O ATENDIMENTO NAS NOSSAS UNIDADES PRÓPRIAS?
+   CSAT — índice de satisfação com o atendimento nas unidades próprias. Fonte: [link], período: [a confirmar], universo: [nº de respondentes].
+   99,4%
+   de satisfação com o atendimento
+   [percentual exato a confirmar]
+   [rels] ['../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide7.xml']
+===== SLIDE 8
+   Agora que já nos conhece um pouco mais, a pergunta que fica é:
+   COMO ENTREGAMOS MAIS GESTÃO DE SAÚDE E SEGURANÇA DO TRABALHO PARA A SUA EMPRESA?
+   [rels] ['../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide8.xml']
+===== SLIDE 9
+   COMO ENTREGAMOS
+   SEIS FRENTES, UMA ATUAÇÃO ÚNICA.
+   MAIS GESTÃO DE SST PARA A SUA EMPRESA
+   01
+   CAPACIDADE TÉCNICA
+   Times ideais, com profissionais capacitados e atualizados às legislações que norteiam o segmento.
+   02
+   SEGURANÇA OPERACIONAL
+   Atendimento de excelência e procedimentos padronizados em todo o território nacional.
+   03
+   REDE AMPLA E INTEGRADA
+   Estrutura própria e credenciada conectada para atender onde a sua operação está.
+   04
+   INOVAÇÃO
+   Integração tecnológica e sistêmica, com leitura dos dados, em um contexto 100% digital.
+   05
+   INTELIGÊNCIA COMPARTILHADA
+   Uma metodologia que constrói conhecimento de forma colaborativa. Ninguém faz nada sozinho.
+   06
+   INVESTIMENTO MÚTUO
+   A empresa e a CRED MHS investem juntas — e todo o sistema cresce junto.
+   [rels] ['../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide9.xml']
+===== SLIDE 10
+   QUEM JÁ VIU VALOR NA ENTREGA DA CRED MHS
+   EMPRESAS QUE CAMINHAM COM A GENTE
+   ‹
+   ›
+   1 / 3
+   [rels] ['../media/image-10-1.png', '../media/image-10-2.png', '../media/image-10-3.png', '../media/image-10-4.png', '../media/image-10-5.png', '../media/image-10-6.png', '../media/image-10-7.png', '../media/image-10-8.png', '../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide10.xml']
+===== SLIDE 11
+   VAMOS AGENDAR A NOSSA CONVERSA?
+   Me chame para iniciarmos esse projeto juntos.
+   Detalhar o escopo
+   Aprofundar na sua demanda
+   Dar o primeiro passo
+   EXECUTIVO
+   [Nome]
+   TELEFONE
+   [(00) 00000-0000]
+   E-MAIL
+   [nome]@credmhs.com.br
+   [rels] ['../media/image-11-1.png', '../slideLayouts/slideLayout1.xml', '../notesSlides/notesSlide11.xml']

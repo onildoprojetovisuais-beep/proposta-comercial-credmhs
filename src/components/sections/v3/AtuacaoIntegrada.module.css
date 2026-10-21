@@ -1,0 +1,63 @@
+.section {
+  overflow: clip;
+}
+
+.head {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  margin-bottom: clamp(2.5rem, 6vw, 5.5rem);
+}
+
+.eyebrow {
+  color: var(--cred-yellow);
+}
+
+/* “Uma atuação integrada.” é inseparável (sem órfã): uma linha, em escala de capa pela coluna. */
+.title {
+  font-weight: var(--fw-bold);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-size: min(6rem, 7.8cqi);
+}
+
+@media (max-width: 599px) {
+  .title {
+    text-transform: none;
+    font-size: 10.4cqi;
+  }
+}
+
+.copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-7) var(--space-9);
+}
+
+.body {
+  color: #e6e5e2;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-regular);
+  line-height: 1.45;
+  max-width: 36ch;
+  text-wrap: pretty;
+}
+
+/* Frase do executivo: peso de manchete, sem moldura nem traço — o espaço faz a separação. */
+.executive {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+/* Duas colunas só quando a frase do executivo cabe sem quebra irregular. */
+@media (min-width: 1200px) {
+  .copy {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: end;
+  }
+}

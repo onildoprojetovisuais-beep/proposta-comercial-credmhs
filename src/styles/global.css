@@ -1,0 +1,537 @@
+@import './tokens.css';
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* V3: sem cabeçalho fixo — as âncoras (#abertura…#contato) alinham no topo. */
+  scroll-padding-top: 0;
+}
+
+/* Sem smooth scroll global (docs/04): rolagem suave só onde o JS decidir, respeitando reduced motion. */
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-brand);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+/* <picture> dentro de molduras recortadas (arco, fotos sangradas) ocupa a moldura inteira. */
+[data-frame] > picture {
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+dd {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Apresentação: os textos passam por typeset (espaços inseparáveis contra órfãs). Com
+   overflow-wrap: break-word o Chrome partia palavras (“negó-cios”) para encaixar o trecho preso;
+   aqui a quebra só acontece entre palavras. Larguras são garantidas por escala (cqi) nas seções. */
+main :is(h1, h2, h3, h4, p, li, dd, dt, figcaption, blockquote) {
+  overflow-wrap: normal;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: var(--color-accent);
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+::selection {
+  background: var(--cred-yellow);
+  color: var(--cred-ink);
+}
+
+/* ---------- Foco visível ---------- */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+  box-shadow: 0 0 0 calc(var(--focus-offset) + var(--focus-width) + 2px) var(--color-focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+/* Em superfícies escuras, inverte o anel: amarelo por fora do contorno branco. */
+[data-surface='dark'] :focus-visible {
+  outline-color: var(--cred-white);
+}
+
+/* ---------- Utilitários ---------- */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-4);
+  top: var(--space-2);
+  z-index: calc(var(--z-dialog) + 1);
+  padding: var(--space-3) var(--space-5);
+  background: var(--cred-ink);
+  color: var(--cred-white);
+  font-weight: var(--fw-bold);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Alias legado: desde o layout v2 não existe container largo (um eixo só). */
+.container--wide {
+  max-width: var(--content-max);
+}
+
+/* Reserva lateral para o trilho de navegação (SideRail, ≥1024 × ≥560): aplicada a TODO
+   .container, para o trilho nunca cobrir texto. */
+@media (min-width: 1024px) and (min-height: 560px) {
+  .container,
+  .container--wide {
+    max-width: min(var(--content-max), calc(100% - var(--rail-reserve)));
+  }
+}
+
+.measure {
+  max-width: var(--measure);
+}
+
+/* Papéis tipográficos reutilizáveis */
+.t-display {
+  font-size: var(--fs-display);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+}
+
+.t-h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+}
+
+.t-h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: -0.01em;
+}
+
+.t-h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+}
+
+.t-h4 {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+}
+
+.t-lead {
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-lead);
+  max-width: var(--measure-lead);
+}
+
+.t-body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  max-width: var(--measure);
+}
+
+.t-small {
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+
+.t-display,
+.t-h1,
+.t-h2,
+.t-h3,
+.t-h4 {
+  text-wrap: balance;
+}
+
+.t-lead,
+.t-body,
+.t-small {
+  text-wrap: pretty;
+}
+
+.t-eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+}
+
+/* Celular estreito: tracking menor para o eyebrow (preso sem órfã) caber na linha. */
+@media (max-width: 419px) {
+  .t-eyebrow {
+    letter-spacing: 0.1em;
+  }
+}
+
+.t-number {
+  font-size: var(--fs-number);
+  font-weight: var(--fw-black);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.t-muted {
+  color: var(--color-text-muted);
+}
+
+/* Evita quebra em termos hifenizados (ex.: "e-mail") sem mudar a copy. */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* =====================================================================
+   LAYOUT v2 — peças compartilhadas (contrato em docs/STACK.md)
+   ===================================================================== */
+
+/* ---------- Painéis: só dois tipos ---------- */
+.panel-read,
+.panel-action {
+  border-radius: var(--panel-radius);
+  padding: var(--panel-pad);
+}
+
+/* < 480: padding lateral menor para que o CTA principal dentro da folha caiba numa linha em 360. */
+@media (max-width: 479px) {
+  .panel-read,
+  .panel-action {
+    padding: var(--panel-pad) var(--panel-pad-sm);
+  }
+}
+
+@media (min-width: 768px) {
+  .panel-read,
+  .panel-action {
+    padding: var(--panel-pad-lg);
+  }
+}
+
+/* Leitura: contrasta com a superfície da seção; sem borda, sem sombra. */
+.panel-read {
+  background: var(--panel-read-bg);
+  color: var(--color-text);
+}
+
+[data-bg='yellow'] .panel-read {
+  background: var(--cred-white);
+}
+
+[data-bg='dark'] .panel-read {
+  background: rgb(255 255 255 / 0.06);
+  color: var(--color-text-on-dark);
+}
+
+/* Ação: folha onde o visitante edita, revisa ou envia. */
+.panel-action {
+  background: var(--panel-action-bg);
+  color: var(--color-text);
+  border: var(--panel-action-border);
+  box-shadow: var(--panel-action-shadow);
+}
+
+/* ---------- Campos de formulário ---------- */
+.field-group {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.field-label {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  line-height: 1.4;
+}
+
+.field-hint {
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  max-width: var(--measure);
+}
+
+.field {
+  display: block;
+  width: 100%;
+  min-height: var(--field-h);
+  padding: var(--field-pad);
+  border: var(--field-border);
+  border-radius: var(--field-radius);
+  background: var(--field-bg);
+  color: var(--cred-ink);
+  font-size: var(--fs-body); /* ≥16px: evita zoom automático no iOS */
+  line-height: 1.4;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.field::placeholder {
+  color: var(--gray-600);
+  opacity: 1;
+}
+
+.field:hover {
+  border-color: var(--cred-ink);
+}
+
+.field:focus-visible {
+  border-color: var(--cred-ink);
+  border-radius: var(--field-radius);
+}
+
+/* Campo de linha única: altura FIXA (52 px) em todas as larguras, alinhada aos botões da mesma linha. */
+input.field {
+  height: var(--field-h);
+  padding-block: 0;
+}
+
+textarea.field {
+  min-height: calc(var(--field-h) * 3);
+  resize: vertical;
+  line-height: var(--lh-body);
+}
+
+/* =====================================================================
+   V3 — peças tipográficas compartilhadas pelas seções
+   ===================================================================== */
+
+/* Caixa alta como TRATAMENTO (a copy guarda caixa normal). Só em títulos curtos. */
+.caps {
+  text-transform: uppercase;
+}
+
+/* Destaque de trecho (“nossa conversa.”, “integrada.”, “sua empresa?”): barra amarela RETA sob a
+   palavra (sobriedade) — nunca texto amarelo sobre fundo claro. Em superfície amarela, a barra é
+   de tinta. box-decoration-break repete a barra em cada linha. */
+.hl {
+  background: linear-gradient(transparent 80%, var(--cred-yellow) 80%, var(--cred-yellow) 96%, transparent 96%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Em superfície escura (provocação e atuação integrada): o destaque é o próprio texto em amarelo
+   (≈11:1 sobre tinta), sem barra. */
+[data-surface='dark'] .hl {
+  background: none;
+  color: var(--cred-yellow);
+}
+
+[data-surface='yellow'] .hl {
+  background: linear-gradient(transparent 86%, var(--cred-ink) 86%, var(--cred-ink) 94%, transparent 94%);
+}
+
+/* Assinatura da referência: MOLDURA AMARELA DESLOCADA atrás de uma foto retangular.
+   Uso: no contêiner externo da foto (a foto fica num filho com [data-frame]). */
+.offset-frame {
+  position: relative;
+  isolation: isolate;
+}
+
+.offset-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: var(--frame-w) solid var(--cred-yellow);
+  transform: translate(var(--frame-dx, var(--frame-offset)), var(--frame-dy, var(--frame-offset)));
+  pointer-events: none;
+}
+
+/* Variante para fotos sobre o amarelo: moldura branca. */
+.offset-frame--white::before {
+  border-color: var(--cred-white);
+}
+
+/* Retângulo amarelo VAZADO em volta de um título-chave (como “Presentation Title”). */
+.title-box {
+  display: inline-block;
+  padding: 0.35em 0.6em 0.4em;
+  border: 6px solid var(--cred-yellow);
+}
+
+/* Marcador numerado pequeno: quadrado amarelo com número em tinta. */
+.num-mark {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  background: var(--cred-yellow);
+  color: var(--cred-ink);
+  font-size: 0.9375rem;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+[data-surface='yellow'] .num-mark {
+  background: var(--cred-ink);
+  color: var(--cred-yellow);
+}
+
+/* Aviso INTERNO do modo de revisão (?revisao=1). Faixa listrada tinta/amarelo: impossível de
+   confundir com conteúdo da página. Nunca renderizar fora do modo de revisão. */
+.review-note {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0.5rem 0.875rem;
+  border: 2px dashed var(--cred-ink);
+  border-radius: var(--radius-sm);
+  background: repeating-linear-gradient(-45deg, var(--cred-white) 0 10px, #fff3bf 10px 20px);
+  color: var(--cred-ink);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  line-height: 1.35;
+  max-width: 100%;
+}
+
+.review-note::before {
+  content: 'Revisão';
+  flex: none;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--cred-ink);
+  color: var(--cred-white);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Movimento de entrada (decorativo) ----------
+   Regra V2: o movimento NUNCA esconde texto. [data-reveal] só desloca levemente elementos
+   gráficos quando o JS marca `html.motion-ok` (sem reduced motion). Sem JS ou com reduced
+   motion, tudo aparece no estado final. `data-inview` é aplicado por useReveal (sections/v3/shared.tsx). */
+.motion-ok [data-reveal] {
+  transition:
+    transform var(--dur-slow) var(--ease-out),
+    opacity var(--dur-slow) var(--ease-out);
+}
+
+.motion-ok [data-reveal]:not([data-inview='true']) {
+  transform: translateY(1.25rem);
+}
+
+/* ---------- Reduced motion (vale desde a primeira renderização) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
