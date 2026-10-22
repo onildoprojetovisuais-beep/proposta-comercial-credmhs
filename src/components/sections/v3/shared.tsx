@@ -216,7 +216,9 @@ export function CountUp({ value, duration = 1600, className }: { value: string; 
       <span aria-hidden="true" style={{ gridArea: '1 / 1', visibility: 'hidden' }}>
         {value}
       </span>
-      <span aria-hidden="true" style={{ gridArea: '1 / 1', justifySelf: 'end' }}>
+      {/* Folga vertical (padding compensado por margem negativa): com entrelinha apertada o
+          desenho dos algarismos passa da caixa, e o celular só repintava a caixa — topo cortado. */}
+      <span aria-hidden="true" style={{ gridArea: '1 / 1', justifySelf: 'end', padding: '0.3em 0', margin: '-0.3em 0' }}>
         {shown}
       </span>
     </span>
