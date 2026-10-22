@@ -48,15 +48,6 @@
   outline-offset: 2px;
 }
 
-.tagline {
-  order: 1;
-  font-size: var(--fs-small);
-  font-weight: var(--fw-bold);
-  letter-spacing: var(--tracking-eyebrow);
-  text-transform: uppercase;
-  color: var(--cred-yellow);
-}
-
 .credit {
   order: 3;
   flex-basis: 100%;
@@ -64,15 +55,10 @@
   color: var(--gray-400);
 }
 
-/* Celular: logo e ícones na mesma linha; assinatura e crédito abaixo. */
+/* Celular: logo e ícones na mesma linha; crédito abaixo. */
 @media (max-width: 767px) {
   .social {
     order: 1;
     margin-right: -12px;
-  }
-
-  .tagline {
-    order: 2;
-    flex-basis: 100%;
   }
 }

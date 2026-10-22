@@ -14,7 +14,7 @@ const PENDING_NOTE = 'Pendente — depoimento real a enviar pela CRED';
 /**
  * Slide 6 — depoimentos. A seção aparece ao cliente quando há depoimentos aprovados (chapterIndex).
  * Citação editorial — aspas num quadrado amarelo, parágrafos separados como enviados, assinatura
- * com nome, cargo e empresa (sem setor). Com mais de um depoimento (hoje Radix e Radisson), vira
+ * com nome, cargo e empresa (sem setor). Com mais de um depoimento (hoje Radix, Radisson e Hotel Nacional), vira
  * carrossel no padrão do de marcas: deslizar nativo com scroll-snap, setas e contador ACIMA das
  * citações (os textos têm alturas muito diferentes), ← → no trilho, sem avanço automático.
  * Sem depoimentos aprovados, só em ?revisao=1, mostra os setores reservados do PPT como pendentes.
@@ -30,7 +30,6 @@ export default function Depoimentos() {
     <SectionShell id="depoimentos" title={typeset(c.title)} header={false} className={styles.section}>
       <div className={styles.layout}>
       <header className={styles.head}>
-        <p className={`t-eyebrow ${styles.eyebrow}`}>{typeset(c.eyebrow)}</p>
         <h2 id={sectionTitleId('depoimentos')} className={styles.title}>
           {typeset(c.title)}
         </h2>

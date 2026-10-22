@@ -13,10 +13,6 @@
 }
 
 /* Rodada 21/10: rótulo sem o traço amarelo antes. */
-.eyebrow {
-  display: block;
-}
-
 .title {
   font-size: var(--fs-h1);
   font-weight: var(--fw-bold);

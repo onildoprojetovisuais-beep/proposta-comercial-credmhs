@@ -12,6 +12,10 @@ import styles from './Transicao.module.css';
 export default function Transicao() {
   const c = copy.transicao;
   const q = c.question;
+  // “de saúde e” | “segurança do trabalho” | “para a” (frase inalterada, só a quebra).
+  const keep = 'segurança do trabalho';
+  const at = q.middle.indexOf(keep);
+  const middle = [q.middle.slice(0, at).trim(), keep, q.middle.slice(at + keep.length).trim()];
   return (
     <SectionShell
       id="transicao"
@@ -28,7 +32,11 @@ export default function Transicao() {
           <span className={styles.before}>{typesetLabel(q.before)}</span>{' '}
           <strong className={styles.emphasis}>{typesetLabel(q.emphasis)}</strong>{' '}
           <span className={styles.rest}>
-            {typeset(q.middle, { orphan: false })}{' '}<span className="hl">{typesetLabel(q.highlight)}</span>
+            {/* Rodada 22/10: quebra fixa depois de “de saúde e”; “segurança do trabalho” segue junto (sem órfã). */}
+            {typesetLabel(middle[0])}
+            <br />
+            <span className={styles.keep}>{middle[1]}</span> {typesetLabel(middle[2])}{' '}
+            <span className="hl">{typesetLabel(q.highlight)}</span>
           </span>
         </h2>
       </div>

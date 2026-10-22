@@ -81,7 +81,6 @@ export default function App() {
               ) : null}
             </ul>
           ) : null}
-          <p className={styles.tagline}>{copy.global.tagline}</p>
           {/* Atribuição da fonte do mapa do Alcance (pedido do coordenador). */}
           <p className={styles.credit}>{MAP_CREDIT}</p>
         </div>

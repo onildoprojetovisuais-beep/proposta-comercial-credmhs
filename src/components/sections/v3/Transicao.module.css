@@ -32,7 +32,7 @@
 /* “Como entregamos”: entrada mais leve; o bloco enfático começa em “mais gestão”. */
 .before {
   display: block;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.32em;
   font-size: 0.62em;
   font-weight: var(--fw-regular);
   letter-spacing: -0.015em;
@@ -51,6 +51,11 @@
 .rest {
   display: block;
   margin-top: 0.12em;
+}
+
+/* “segurança do trabalho” não se parte (quebra fixa antes, em Transicao.tsx). */
+.keep {
+  white-space: nowrap;
 }
 
 @media (max-width: 599px) {

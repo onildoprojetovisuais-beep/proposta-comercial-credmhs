@@ -411,3 +411,9 @@ Pedido do Nil: o mobile estava "grandão", com muito texto empilhado. O texto do
 - Desktop: nenhum controle novo (0 botões de acordeão, aba ou "ler completo" em 1440). Os componentes só trocam de forma abaixo de 768 px (`useMediaQuery`).
 - Medido em Chromium 390×844: página de ~12.800 → ~9.400 px. Sem rolagem horizontal em 390 e 320. Acordeão, abas (clique e seta), botões das unidades e "ler completo" (245 → 758 px) funcionando, 0 erros de console. `npm run build` OK.
 - Capturas: `qa/capturas/v3/mobile-compacto/`. Não refeitos: axe, checks de conteúdo, captura completa do desktop.
+
+## Rodada de apontamentos (22/10/2026)
+
+- Textos: ver `docs/V3-ALTERACOES-TEXTO.md` (rodada 22/10). Terceiro depoimento (Hotel Nacional) no carrossel: contador 1/3 → 3/3 conferido.
+- Slide 8: quebra fixa antes de “segurança do trabalho” e respiro maior abaixo de “Como entregamos”. Conferido em 1440 e 400 px.
+- 99,4% deformado ao rolar (relato do Nil, corrigia ao abrir depoimentos): não reproduzido no Chrome desktop. Causa provável: a caixa do número mudava de largura durante a contagem (“0,0” → “99,4”) e o navegador não repintava a área. `CountUp` agora reserva a largura do número final desde o início. **Pendente:** confirmar no aparelho em que o problema apareceu.

@@ -16,7 +16,7 @@ export const copy = {
   /** Slide 1 */
   abertura: {
     greetingTemplate: 'Olá, sou {firstName}.',
-    lead: 'Vim te mostrar como a CRED MHS pode entregar mais gestão para a saúde e segurança do trabalho da sua empresa.',
+    lead: 'Estou aqui para te mostrar como a CRED MHS pode entregar mais gestão para a saúde e segurança do trabalho da sua empresa.',
     body: 'Quero te conhecer, mapear os desafios que temos e oferecer solução, sob medida, para o negócio — e acompanhar essa evolução.',
     /** CTA de avanço → #provocacao (rolagem livre continua funcionando). */
     cta: 'Saiba mais',
@@ -99,7 +99,6 @@ export const copy = {
 
   /** Slide 6 — PENDENTE: a CRED ainda enviará os depoimentos. Seção oculta ao cliente enquanto vazia. */
   depoimentos: {
-    eyebrow: 'Quem somos · Clientes',
     title: 'O que nossos clientes falam sobre nós',
     /**
      * Texto do cliente, sem edição (recebido pelo Nil em 20/10/2026; uso autorizado). Parágrafos
@@ -123,6 +122,17 @@ export const copy = {
         name: 'Sandra Coelho',
         role: 'Gerente de RH',
         company: 'Radisson',
+        sector: 'Hotelaria',
+        approved: true,
+      },
+      /* Recebido pelo Nil em 22/10/2026 para publicar no carrossel; parágrafos como enviados. */
+      {
+        id: 'hotel-nacional-michele-rosa',
+        quote:
+          'Nossa experiência com a CRED MHS vai muito além dos serviços tradicionais de Medicina do Trabalho. Encontramos uma parceria que oferece assessoria completa, com orientação, suporte e soluções estratégicas que fazem a diferença no nosso dia a dia.\n\nUm dos grandes diferenciais é o atendimento humanizado, a proximidade e o cuidado genuíno que têm com o cliente. Sabemos que podemos contar com uma equipe comprometida, que busca entender nossas necessidades e nos apoiar na construção das melhores soluções.\n\nÉ uma parceria que agrega valor ao nosso trabalho e nos traz segurança e confiança. Esperamos seguir juntos por muitos e muitos anos!',
+        name: 'Michele Rosa',
+        role: 'Coord. de RH',
+        company: 'Hotel Nacional',
         sector: 'Hotelaria',
         approved: true,
       },
@@ -185,7 +195,7 @@ export const copy = {
      */
     transversal: {
       title: 'Comunicação e reputação',
-      text: 'A força da marca gerando a percepção positiva sobre a empresa como local de trabalho sadio, seguro, e portanto comprometido com o bem estar da sociedade.',
+      text: 'A força da sua marca gerando a percepção positiva sobre a empresa como local de trabalho sadio, seguro, e portanto, comprometido com o bem estar da sociedade.',
     },
   },
 

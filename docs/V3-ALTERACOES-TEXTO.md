@@ -76,3 +76,16 @@ Os trechos acrescentados passaram pela skill `stop-slop`: frases curtas, sem adv
 | Item | Original do PPT | Texto na página | Justificativa |
 |---|---|---|---|
 | CTA da abertura | (não existe no PPT) | Saiba mais | Controle de avanço preservado da V2: leva a `#provocacao`. A rolagem livre continua funcionando. É microcopy de interface e não muda o texto da Sabrina. |
+
+## Rodada 22/10/2026 — apontamentos
+
+Pedidos recebidos pelo Nil em 22/10/2026, aplicados como enviados.
+
+| Onde | Antes | Agora |
+|---|---|---|
+| Slide 1 — abertura | Vim te mostrar como a CRED MHS… | Estou aqui para te mostrar como a CRED MHS… |
+| Slide 9 — Comunicação e reputação | A força da marca gerando… seguro, e portanto comprometido… | A força da **sua** marca gerando… seguro, e portanto**,** comprometido… |
+| Slide 6 — depoimentos | Rótulo “Quem somos · Clientes” acima do título | Rótulo retirado |
+| Slide 6 — depoimentos | Radix e Radisson | + Michele Rosa, Coord. de RH, Hotel Nacional (texto como enviado) |
+| Rodapé | Logo + “Saúde e Segurança do Trabalho” | Só o logo |
+| Slide 8 — transição | “de saúde e segurança / do trabalho” | Quebra fixa: “de saúde e / segurança do trabalho”; mais espaço entre “Como entregamos” e “mais gestão” (o “g” encostava no “mais”). Frase inalterada. |

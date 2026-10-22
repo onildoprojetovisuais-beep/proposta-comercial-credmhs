@@ -209,9 +209,16 @@ export function CountUp({ value, duration = 1600, className }: { value: string; 
   }, [value, target, decimals, duration]);
 
   return (
-    <span ref={ref} className={className} style={{ fontVariantNumeric: 'tabular-nums' }}>
+    <span ref={ref} className={className} style={{ fontVariantNumeric: 'tabular-nums', display: 'inline-grid' }}>
       <span className="visually-hidden">{value}</span>
-      <span aria-hidden="true">{shown}</span>
+      {/* Reserva a largura do número final: a caixa não muda de tamanho durante a contagem
+          (no celular, a mudança deixava o número repintado deformado até outro relayout). */}
+      <span aria-hidden="true" style={{ gridArea: '1 / 1', visibility: 'hidden' }}>
+        {value}
+      </span>
+      <span aria-hidden="true" style={{ gridArea: '1 / 1', justifySelf: 'end' }}>
+        {shown}
+      </span>
     </span>
   );
 }
