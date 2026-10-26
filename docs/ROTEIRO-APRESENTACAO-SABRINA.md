@@ -52,7 +52,7 @@ Vou passar do começo ao fim como se eu fosse o cliente, e no final tenho umas p
 
 **Falar:** "Essa é a sua trilha de valor. Quando a seção entra na tela, a linha passa por cada etapa uma vez e destaca a explicação. Enquanto você fala, ela não fica repetindo. Se precisar, dá para pausar ou repetir nos botões embaixo. Investimento aparece como conclusão da trilha, com o mesmo peso das outras etapas, e não como um pacote."
 
-**Mostrar:** deixar a animação rodar inteira; depois clicar em "Repetir animação".
+**Mostrar:** deixar a animação rodar inteira (ela toca uma vez e não se repete).
 
 ### 07 — Soluções · selo **3C Conhecimento**
 **Na tela:** os quatro eixos (Normativo, Reputacional, Gestão, Inovação), cada um com resumo e exemplos; "Outros exemplos do eixo" abre o detalhe. Depois, a rede própria e credenciada.

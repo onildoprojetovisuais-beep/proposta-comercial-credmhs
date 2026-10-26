@@ -93,7 +93,6 @@ export const copy = {
         'Mapa do Brasil com os estados e os símbolos de presença da CRED MHS; no Rio de Janeiro, a rede própria, com as unidades Barra e Centro.',
       pause: 'Pausar animação',
       play: 'Continuar animação',
-      replay: 'Repetir animação',
     },
   },
 
@@ -187,11 +186,11 @@ export const copy = {
   /** Slide 9 — único trecho com ajustes de conteúdo autorizados (docs/V3-ALTERACOES-TEXTO.md). */
   frentes: {
     /* Rodada 21/10: rótulo "Como entregamos" e bloco "Mais gestão de SST para a sua empresa" retirados. */
-    title: 'Sete frentes, uma atuação única.',
+    title: 'Múltiplas frentes, uma atuação única.',
     // Itens: `fronts` (abaixo).
     /**
-     * Texto da Sabrina (21/10), literal. Enquadramento (fecho sem número × oitava frente) AGUARDA
-     * decisão dela: por ora fecha a seção, sem número e fora da contagem.
+     * Texto da Sabrina (21/10), literal. Fecho da seção, sem número e fora da contagem; em 23/10
+     * ganhou destaque (faixa amarela) como resultado da metodologia: fortalece a marca do cliente.
      */
     transversal: {
       title: 'Comunicação e reputação',
@@ -237,7 +236,8 @@ export const copy = {
 } as const;
 
 /**
- * Sete frentes (slide 9; "Dados e Privacidade" incluída pela Sabrina em 21/10). `original` guarda o texto do PPT (documentação; nunca renderizar).
+ * Oito frentes (slide 9; "Dados e Privacidade" incluída pela Sabrina em 21/10; em 23/10 dividida em
+ * "Cultura de Dados" (05) e "Privacidade e Segurança da Informação" (06)). `original` guarda o texto do PPT (documentação; nunca renderizar).
  * Títulos e textos ajustados são propostas sujeitas à revisão da Sabrina.
  */
 export const fronts: readonly Front[] = [
@@ -277,7 +277,7 @@ export const fronts: readonly Front[] = [
   {
     id: 'tecnologia',
     number: '04',
-    title: 'Integração tecnológica e dados',
+    title: 'Convergência Digital',
     text: 'Sistema operacional em nuvem, apropriação de tecnologia para dispositivos móveis e teleatendimento, integração nativa com diversos ERP e associação de IA.',
     original: {
       title: 'Inovação',
@@ -286,17 +286,26 @@ export const fronts: readonly Front[] = [
     adjustment: 'D',
   },
   {
-    id: 'dados-privacidade',
+    id: 'cultura-dados',
     number: '05',
-    title: 'Dados e Privacidade',
+    title: 'Cultura de Dados',
+    text: 'Processos decisórios orientados por dados.',
+    // Frente nova (não existe no PPT): rodada de 23/10.
+    original: { title: '', text: '' },
+    adjustment: 'I',
+  },
+  {
+    id: 'privacidade',
+    number: '06',
+    title: 'Privacidade e Segurança da Informação',
     text: 'Certificada ISO 9001 / 27001 / 45001 e LGPD',
-    // Frente nova (não existe no PPT): incluída pela Sabrina em 21/10.
+    // Frente nova (não existe no PPT): incluída pela Sabrina em 21/10 como "Dados e Privacidade"; título ajustado em 23/10.
     original: { title: '', text: '' },
     adjustment: 'H',
   },
   {
     id: 'inteligencia',
-    number: '06',
+    number: '07',
     title: 'Inteligência compartilhada',
     text: 'Uma metodologia que constrói conhecimento de forma colaborativa.',
     original: {
@@ -307,7 +316,7 @@ export const fronts: readonly Front[] = [
   },
   {
     id: 'investimento',
-    number: '07',
+    number: '08',
     title: 'Investimento mútuo',
     text: 'A empresa e a CRED MHS investem juntas na troca genuína de informação e na construção de repertório e autoridade — e todo o sistema cresce junto.',
     original: {
@@ -329,7 +338,7 @@ export const chapters: readonly Chapter[] = [
   { id: 'depoimentos', slide: 6, navLabel: 'Depoimentos' },
   { id: 'satisfacao', slide: 7, navLabel: 'Satisfação' },
   { id: 'transicao', slide: 8, navLabel: 'Como entregamos', navHidden: true },
-  { id: 'frentes', slide: 9, navLabel: 'Sete frentes', legacyHashes: ['solucoes', 'trilha', 'm05', 'ecossistema', 'm07', 'aplicacoes'] },
+  { id: 'frentes', slide: 9, navLabel: 'Frentes', legacyHashes: ['solucoes', 'trilha', 'm05', 'ecossistema', 'm07', 'aplicacoes'] },
   { id: 'empresas', slide: 10, navLabel: 'Empresas', legacyHashes: ['m04', 'empresas-atendidas'] },
   { id: 'contato', slide: 11, navLabel: 'Contato', legacyHashes: ['m09', 'sua-pauta', 'm10'] },
 ];

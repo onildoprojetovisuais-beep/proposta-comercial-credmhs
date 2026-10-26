@@ -4,14 +4,13 @@ import { useReveal, typeset, typesetLabel } from './shared';
 import styles from './Frentes.module.css';
 
 /**
- * Slide 9 — sete frentes (rodada 21/10: leveza).
- * - Título “Sete frentes, uma atuação única.” sem rótulo acima e sem bloco de fecho preto.
- * - As sete frentes (01–07) em linhas largas separadas só por espaço: sem faixa transversal,
+ * Slide 9 — oito frentes (rodada 21/10: leveza; 23/10: título e frentes 04–06 ajustados).
+ * - Título “Múltiplas frentes, uma atuação única.” sem rótulo acima e sem bloco de fecho preto.
+ * - As oito frentes (01–08) em linhas largas separadas só por espaço: sem faixa transversal,
  *   sem marcas de cruzamento, sem divisórias, caixas ou molduras. Número leve, título e texto.
- * - “Comunicação e reputação” fecha a seção como texto flutuante (título + frase), sem número e
- *   fora da contagem. O enquadramento aguarda a Sabrina (fecho × frente 08): o bloco está isolado
- *   em <Fecho />; para virar frente 08, basta incluí-lo em `fronts` e remover <Fecho />.
- * - Celular: lista aberta (as sete frentes visíveis, sem acordeão). Os textos são curtos (1–3
+ * - “Comunicação e reputação” fecha a seção em faixa amarela (23/10: destaque pedido para o
+ *   resultado da metodologia, a força da marca), sem número e fora da contagem.
+ * - Celular: lista aberta (as oito frentes visíveis, sem acordeão). Os textos são curtos (1–3
  *   linhas); a leitura autônoma e a leveza valem mais que esconder conteúdo atrás de toques.
  * Textos: `title`/`text` de `fronts` (nunca `original`).
  */
@@ -46,12 +45,12 @@ export default function Frentes() {
   );
 }
 
-/** Fecho “Comunicação e reputação” — sem número, fora da contagem (decisão pendente da Sabrina). */
+/** Fecho “Comunicação e reputação” — sem número, fora da contagem; faixa amarela de destaque (23/10). */
 function Fecho({ title, text }: { title: string; text: string }) {
   return (
     <aside className={styles.closing} aria-labelledby="frentes-fecho">
       <h3 id="frentes-fecho" className={`caps ${styles.closingTitle}`}>
-        <span className={styles.closingMark}>{typesetLabel(title)}</span>
+        {typesetLabel(title)}
       </h3>
       <p className={styles.closingText}>{typeset(bind(text))}</p>
     </aside>

@@ -4,7 +4,8 @@
  * - Animado: o player Remotion (MapPlayer) é importado sob demanda quando a seção se aproxima
  *   e toca UMA vez quando o mapa entra na tela. Não repete sozinho. Sai da tela → pausa;
  *   volta → continua de onde parou (se o visitante não tiver pausado). Terminado, fica parado
- *   no último quadro (mapa completo). Botões HTML: Pausar/Continuar e Repetir.
+ *   no último quadro (mapa completo), sem controles. Botão HTML Pausar/Continuar só enquanto toca
+ *   (rodada 23/10: “Repetir animação” retirado).
  * - prefers-reduced-motion (ou falha ao carregar o player): desenho estático completo, sem player
  *   (MapStatic, também sob demanda: a geometria não entra no bundle inicial).
  * - Antes de tocar: espaço vazio com a mesma proporção (o quadro 0 também é vazio; sem salto).
@@ -131,23 +132,13 @@ export function BrazilMap(props: { className?: string }): JSX.Element {
     }
   };
 
-  const replay = () => {
-    const p = playerRef.current;
-    if (!p) return;
-    setUserPaused(false);
-    setLabelOn(false);
-    p.seekTo(0);
-    p.play();
-    setPhase('playing');
-  };
-
   const showLabel = isStatic || labelOn;
   // “Rio de Janeiro - Barra e Centro”: uma linha; no mapa estreito quebra DEPOIS do hífen
   // (“Rio de Janeiro -” / “Barra e Centro”), nunca antes. Texto inalterado.
   const rioParts = t.rioLabel
     .split(/(?<= -) /)
     .map((part) => part.replace(/ /g, ' '));
-  const showControls = !isStatic && ready && phase !== 'idle';
+  const showControls = !isStatic && ready && (phase === 'playing' || phase === 'paused');
 
   return (
     <div ref={rootRef} className={[styles.root, props.className].filter(Boolean).join(' ')}>
@@ -192,16 +183,14 @@ export function BrazilMap(props: { className?: string }): JSX.Element {
         </p>
       </div>
 
-      {showControls && (
+      {/* Espaço reservado mesmo sem botão (antes de tocar e ao fim): o texto abaixo não salta. */}
+      {!isStatic && (
         <div className={styles.controls}>
-          {phase !== 'ended' && (
+          {showControls && (
             <button type="button" className={styles.control} onClick={togglePause}>
               {phase === 'playing' ? t.pause : t.play}
             </button>
           )}
-          <button type="button" className={styles.control} onClick={replay}>
-            {t.replay}
-          </button>
         </div>
       )}
     </div>

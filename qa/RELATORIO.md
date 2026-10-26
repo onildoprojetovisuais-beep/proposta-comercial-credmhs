@@ -95,6 +95,25 @@ trilha 1440 (etapa 2, pausada, final, reduced motion), 768, 390 (etapa 3, reduce
 - Desempenho em máquina lenta (o chunk do player tem ~93 kB gzip; carrega só a ~800 px da trilha).
 - Licença do Remotion para uso comercial (P45). Transcrição de 13/10 (P43) e a revisão visual citada (P44).
 
+## Rodada 2026-10-26 — faixa “Comunicação e reputação” e marcas
+
+**Implementado:** título da faixa amarela ampliado (desktop: título à esquerda, frase à direita; celular: empilhado); 6 marcas que faltavam (FFA, Grupo Ombrello, Trigo, Cimento Nacional, Rede Manaus, Hotel Santa Teresa) e logo completo do Hotel Nacional — 20 marcas, detalhes em `docs/V3-LOGOS.md`.
+
+**Testado:** capturas Playwright da faixa em 1440/1100/390 px (sem rolagem horizontal) e das 20 marcas (todas carregam, sem erro de página); `npm run build` ok; verificações `__checks__.ts` 18/18. Ajustes finos de tamanho (`optical` de FFA, Hotel Nacional, Santa Teresa; entrelinha do título) feitos depois das capturas, sem nova captura.
+
+## Rodada 2026-10-23 — aba Equipe (administração pela CRED)
+
+**Objetivo:** a CRED cadastrar, convidar e desativar pessoas sem depender de Nil/SQL.
+
+**Implementado:** migration `20261023120000_panel_admins.sql` (`panel_admins`, `is_panel_admin()`, RPC `admin_list_executives()`), Edge Function `supabase/functions/painel-admin`, snippet `tornar-administrador.sql`, `src/lib/supabase/admin.ts`, abas **Meu perfil / Equipe** no painel (`TeamAdmin.tsx`). Admin sem perfil próprio vê só a Equipe.
+
+**Testado:**
+- `npm run test:rls`: **74/74** (9 novos: ninguém é admin por padrão; anon sem execução; `panel_admins` fechada à API; não admin recebe 42501; snippet promove por e-mail; lista com situação `ativo`/`convite-pendente`/`sem-acesso`/`bloqueado`; admin não ganha UPDATE/SELECT em linhas alheias; cascade ao excluir conta; RLS ligada).
+- `npm run typecheck`: ok.
+- Build de produção com Supabase **simulado** (Playwright, `page.route`): lista, validação do cadastro, sugestão de nome curto/link/e-mail de acesso, payload enviado à função, confirmação de desativar, perfil padrão e próprio sem "Desativar", 390 px sem rolagem horizontal, nenhum erro de página. Capturas em `qa/capturas/equipe-admin/`.
+
+**Não testado:** a Edge Function em um Supabase real (convite GoTrue, ban, `resetPasswordForEmail`, CORS, JWT). Não existe projeto Supabase da CRED criado; o painel em produção segue sem configuração.
+
 ## Rodada 2026-10-10 — personalização por executivo com Supabase
 
 **Estado:** implementado e testado localmente com Supabase **simulado**. Nenhum projeto Supabase real foi criado ou conectado, e nada foi publicado. As credenciais e o projeto dependem de Nil (passo a passo em `docs/CONFIGURACAO-SUPABASE.md`).

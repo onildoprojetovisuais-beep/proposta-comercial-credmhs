@@ -88,6 +88,7 @@ Aplique **uma vez**, **nesta ordem**:
 1. `supabase/migrations/20261010120000_executives.sql`
 2. `supabase/migrations/20261010120100_executive_photos_storage.sql`
 3. `supabase/migrations/20261010120200_seed_sabrina.sql`
+4. `supabase/migrations/20261023120000_panel_admins.sql`
 
 ### Opção A — SQL Editor (sem instalar nada)
 
@@ -145,7 +146,29 @@ As fotos ficam em `executive-photos/<id do usuário>/<arquivo>`. O painel otimiz
 2. **Authentication → Users → Invite user** com o e-mail de login.
 3. **SQL Editor**: `supabase/snippets/vincular-executivo.sql`.
 
-### 5.3 Administração
+### 5.0 Caminho recomendado: a CRED administra pelo painel (aba Equipe)
+
+Depois desta configuração inicial, a CRED cadastra e desativa pessoas sozinha, sem SQL:
+
+1. **Publicar a Edge Function** (uma vez, e de novo só se o arquivo mudar):
+
+   ```bash
+   npx supabase login
+   npx supabase link --project-ref <REF_DO_PROJETO>
+   npx supabase functions deploy painel-admin
+   ```
+
+   `SUPABASE_URL`, `SUPABASE_ANON_KEY` e `SUPABASE_SERVICE_ROLE_KEY` já existem no ambiente da função.
+2. **Primeira administradora**: dar acesso à pessoa da CRED que vai gerir a equipe (ex.: Sabrina). Ela precisa ter conta (5.1). Depois, `supabase/snippets/tornar-administrador.sql` com o e-mail de login dela.
+3. Pronto. No `/painel/`, quem é admin vê as abas **Meu perfil** e **Equipe**. Na Equipe:
+   - **Adicionar pessoa**: nome, nome de apresentação, cargo, e-mail de contato, telefone, e-mail de acesso e final do link (sugerido a partir do nome, imutável). Ao salvar, o perfil é criado e o convite sai por e-mail. A pessoa cria a senha e envia a própria foto.
+   - **Reenviar convite** (convite não aceito) ou **Enviar link de nova senha** (conta ativa).
+   - **Enviar convite** para perfil que ainda não tem acesso.
+   - **Desativar / Reativar**: desativar esconde os dados do link e bloqueia o login. O perfil padrão e o próprio perfil não podem ser desativados.
+
+   Pré-requisito: SMTP próprio (2.3). Com o SMTP embutido, convites só chegam a membros da equipe do projeto Supabase.
+
+### 5.3 Administração pelo SQL (alternativa)
 
 | Tarefa | Como |
 | --- | --- |

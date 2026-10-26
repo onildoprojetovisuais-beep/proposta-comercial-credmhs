@@ -48,7 +48,7 @@ Os números 01–06 e a ordem das frentes não mudaram. O texto original fica gu
 | B — texto 02 | Atendimento de excelência e procedimentos padronizados em todo o território nacional. | Atendimento de excelência, com estratégia de atuação, gestão, processos e procedimentos padronizados em todo o território nacional. Consistência na operação onde a sua empresa estiver ou onde o exame acontecer. | Padronização da estratégia de atuação, da gestão, dos processos e dos procedimentos no país; benefício: consistência onde a empresa estiver ou o exame acontecer. Sem prometer ausência de risco. |
 | **C** — título 03 | Rede ampla e integrada | (sem mudança) | — |
 | C — texto 03 | Estrutura própria e credenciada conectada para atender onde a sua operação está. | Estrutura de atendimento própria e credenciada, integrada em uma só rede para atender onde a sua operação está. | Deixar claro que a frente 03 fala da estrutura de atendimento (própria e credenciada) e que “integrada” é a rede, não a tecnologia, que fica na frente 04. |
-| **D** — título 04 | Inovação | **Integração tecnológica e dados** | O título passa a dizer o que a frente entrega: integração tecnológica e sistêmica, leitura de dados, contexto 100% digital. |
+| **D** — título 04 | Inovação | **Integração tecnológica** | O título passa a dizer o que a frente entrega: integração tecnológica e sistêmica, contexto 100% digital. Em 23/10 “e dados” saiu do título (o tema fica na frente 05, Dados e Privacidade). |
 | D — texto 04 | Integração tecnológica e sistêmica, com leitura dos dados, em um contexto 100% digital. | Integração tecnológica e sistêmica, com leitura dos dados, em um contexto 100% digital, do aplicativo ao teleatendimento. | Aplicativo e teleatendimento são os exemplos dados pela Sabrina. Nenhuma funcionalidade ou tela foi acrescentada. |
 | **E** — texto 05 | Uma metodologia que constrói conhecimento de forma colaborativa. Ninguém faz nada sozinho. | Uma metodologia que constrói conhecimento de forma colaborativa. | Primeira frase preservada exatamente; “Ninguém faz nada sozinho.” sai da página. |
 | **F** — texto 06 | A empresa e a CRED MHS investem juntas — e todo o sistema cresce junto. | A empresa e a CRED MHS investem juntas na troca genuína de informação e na construção de repertório e autoridade — e todo o sistema cresce junto. | Investimento das duas partes, troca genuína de informação, construção de repertório e autoridade. O complemento diz em que as duas partes investem, para não ler como investimento só financeiro. Mantidos o travessão e o fecho da Sabrina. |
@@ -89,3 +89,14 @@ Pedidos recebidos pelo Nil em 22/10/2026, aplicados como enviados.
 | Slide 6 — depoimentos | Radix e Radisson | + Michele Rosa, Coord. de RH, Hotel Nacional (texto como enviado) |
 | Rodapé | Logo + “Saúde e Segurança do Trabalho” | Só o logo |
 | Slide 8 — transição | “de saúde e segurança / do trabalho” | Quebra fixa: “de saúde e / segurança do trabalho”; mais espaço entre “Como entregamos” e “mais gestão” (o “g” encostava no “mais”). Frase inalterada. |
+
+## Rodada 23/10 — slide 9
+
+| Item | Antes | Depois |
+|---|---|---|
+| Título da seção | Sete frentes, uma atuação única. | **Múltiplas frentes, uma atuação única.** |
+| Frente 04 — título | Integração tecnológica e dados → Integração tecnológica | **Convergência Digital** (texto da frente sem mudança) |
+| Frente 05 (nova) | — | **Cultura de Dados** — “Processos decisórios orientados por dados.” (pedido escrito “orientadas”; concordância ajustada para “processos … orientados”) |
+| Frente 06 — título | Dados e Privacidade (05) | **Privacidade e Segurança da Informação** (texto “Certificada ISO 9001 / 27001 / 45001 e LGPD” mantido) |
+| Numeração | 01–07 | 01–08 (Inteligência compartilhada = 07, Investimento mútuo = 08) |
+| Comunicação e reputação | fecho em texto flutuante | mesmo texto, em **faixa amarela de destaque** ao fim da seção (o resultado da metodologia: a força da marca do cliente) |

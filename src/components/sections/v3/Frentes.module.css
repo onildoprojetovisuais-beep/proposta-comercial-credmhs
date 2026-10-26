@@ -1,4 +1,4 @@
-/* Sete frentes (slide 9) — rodada 21/10, leveza: espaço no lugar de linhas, faixas e caixas.
+/* Oito frentes (slide 9) — rodada 21/10, leveza: espaço no lugar de linhas, faixas e caixas.
    Grade de leitura: número | título | texto (desktop); empilhado no celular. */
 .section {
   overflow: clip;
@@ -101,47 +101,48 @@
   }
 }
 
-/* Fecho “Comunicação e reputação”: texto flutuante, alinhado à coluna dos títulos.
-   Sem caixa e sem número; o amarelo aparece só como marca-texto sob o título. */
+/* Fecho “Comunicação e reputação” (rodada 23/10): resultado da metodologia, em destaque.
+   Faixa amarela reta na largura do container, separada das frentes por espaço; título grande em
+   caixa alta e a frase em corpo de subtítulo: lado a lado no desktop, empilhados no celular. */
 .closing {
+  container-type: inline-size;
   margin-top: clamp(3.5rem, 2rem + 5vw, 6.5rem);
-  max-width: 46rem;
   display: grid;
-  gap: var(--space-4);
+  gap: clamp(1.75rem, 1rem + 3vw, 3.5rem);
+  padding: clamp(2.25rem, 1.25rem + 4vw, 5.5rem) clamp(1.5rem, 1rem + 3vw, 4.5rem);
+  background: var(--cred-yellow);
+  color: var(--cred-ink);
 }
 
 .closingTitle {
   margin: 0;
-  font-size: var(--fs-h2);
+  /* “COMUNICAÇÃO” inteiro numa linha, preenchendo boa parte da faixa. */
+  font-size: min(12.5cqi, 9rem);
   font-weight: var(--fw-bold);
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-}
-
-.closingMark {
-  background: linear-gradient(transparent 58%, var(--cred-yellow) 58%, var(--cred-yellow) 92%, transparent 92%);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  padding-inline: 0.08em;
+  line-height: 1; /* 0,92 deixava a cedilha encostar no til da linha de baixo */
+  letter-spacing: -0.02em;
 }
 
 .closingText {
   margin: 0;
-  font-size: var(--fs-lead);
-  line-height: 1.55;
-  max-width: 46ch;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  max-width: 34ch;
   text-wrap: pretty;
 }
 
-@media (min-width: 768px) {
-  .closing {
-    margin-left: calc(4rem + var(--space-4));
-  }
-}
-
 @media (min-width: 1100px) {
+  /* Título grande à esquerda (empilhado em duas linhas), frase à direita. */
   .closing {
-    margin-left: calc(5rem + var(--space-6));
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    column-gap: clamp(2.5rem, 1rem + 3vw, 4.5rem);
+    align-items: center;
+  }
+
+  .closingTitle {
+    font-size: min(7cqi, 7rem);
   }
 }
 

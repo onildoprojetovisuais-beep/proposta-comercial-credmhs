@@ -62,7 +62,7 @@ Status: **idêntico** (mesma grafia) · **caixa** (só muda a caixa) · **ajuste
 | `indicators[vidas]` | +550 mil vidas gerenciadas | + 550 mil · vidas gerenciadas | idêntico (separado em prefixo/valor/unidade) |
 | `indicators[clientes]` | +5 mil clientes em todo o território nacional | + 5 mil · clientes em todo o território nacional | idêntico |
 | `map.ownNetworkLabel` / `ownNetworkUnits` | (eyebrow) | Rede própria · Barra · Centro | idêntico ao eyebrow (rótulo do mapa) |
-| `map.ariaLabel`, `pause`, `play`, `replay` | — | nome acessível e controles | microcopy de interface |
+| `map.ariaLabel`, `pause`, `play` | — | nome acessível e controles | microcopy de interface |
 
 ## Slide 6 — `depoimentos` (oculto ao cliente)
 

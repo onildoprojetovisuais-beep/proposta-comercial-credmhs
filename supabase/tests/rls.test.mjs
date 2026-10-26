@@ -92,7 +92,10 @@ alter default privileges in schema public grant all on functions to anon, authen
 
 create schema auth;
 grant usage on schema auth to anon, authenticated, service_role;
-create table auth.users (id uuid primary key, email text, created_at timestamptz default now());
+create table auth.users (
+  id uuid primary key, email text, created_at timestamptz default now(),
+  email_confirmed_at timestamptz, banned_until timestamptz
+);
 
 create function auth.uid() returns uuid language sql stable as $$
   select coalesce(
@@ -156,6 +159,7 @@ async function main() {
     '20261010120000_executives.sql',
     '20261010120100_executive_photos_storage.sql',
     '20261010120200_seed_sabrina.sql',
+    '20261023120000_panel_admins.sql',
   ], 'migrations esperadas');
   for (const f of files) {
     try {
@@ -538,10 +542,84 @@ async function main() {
     await rejects(db.query(`update public.executives set user_id = '${A}' where slug = 'bruno-renomeado'`), /duplicate key|unique/i);
   });
 
+  // --- Migration 4: administração da equipe -------------------------------------
+  await test('admin: ninguém é administrador por padrão', async () => {
+    await asUser(A);
+    eq((await db.query(`select public.is_panel_admin() v`)).rows[0].v, false);
+  });
+
+  await test('admin: anon não executa is_panel_admin nem admin_list_executives', async () => {
+    await asAnon();
+    await rejects(db.query(`select public.is_panel_admin()`), /permission denied/i);
+    await rejects(db.query(`select * from public.admin_list_executives()`), /permission denied/i);
+  });
+
+  await test('admin: authenticated não lê nem grava panel_admins pela API', async () => {
+    await asUser(A);
+    await rejects(db.query(`select * from public.panel_admins`), /permission denied/i);
+    await rejects(db.query(`insert into public.panel_admins (user_id) values ('${A}')`), /permission denied/i);
+  });
+
+  await test('admin: não administrador recebe 42501 em admin_list_executives', async () => {
+    await asUser(B);
+    const err = await rejects(db.query(`select * from public.admin_list_executives()`), /restrito/i);
+    eq(err.code, '42501');
+  });
+
+  await test('admin: snippet tornar-administrador.sql promove por e-mail', async () => {
+    await asAdmin();
+    const snippet = readFileSync(join(here, '..', 'snippets', 'tornar-administrador.sql'), 'utf8');
+    await db.exec(snippet.replaceAll('<EMAIL_DE_LOGIN>', 'A@Example.test'));
+    await asUser(A);
+    eq((await db.query(`select public.is_panel_admin() v`)).rows[0].v, true);
+    await asUser(B);
+    eq((await db.query(`select public.is_panel_admin() v`)).rows[0].v, false);
+  });
+
+  await test('admin: lista todos os perfis com situação do acesso', async () => {
+    await asAdmin();
+    await db.exec(`update auth.users set email_confirmed_at = now() where id = '${A}';
+      update auth.users set email_confirmed_at = null, banned_until = null where id = '${B}';`);
+    await asUser(A);
+    const r = await db.query(`select slug, is_self, login_email, access_status from public.admin_list_executives() order by slug`);
+    const bySlug = Object.fromEntries(r.rows.map((x) => [x.slug, x]));
+    eq(bySlug['sabrina-ferreira'], { slug: 'sabrina-ferreira', is_self: true, login_email: 'a@example.test', access_status: 'ativo' });
+    eq(bySlug['inativo-teste'].access_status, 'sem-acesso');
+    const bruno = r.rows.find((x) => x.login_email === 'b@example.test');
+    eq(bruno.access_status, 'convite-pendente');
+    eq(bruno.is_self, false);
+  });
+
+  await test('admin: conta bloqueada aparece como bloqueado', async () => {
+    await asAdmin();
+    await db.exec(`update auth.users set email_confirmed_at = now(), banned_until = now() + interval '100 years' where id = '${B}'`);
+    await asUser(A);
+    const r = await db.query(`select access_status from public.admin_list_executives() where login_email = 'b@example.test'`);
+    eq(r.rows[0].access_status, 'bloqueado');
+    await asAdmin();
+    await db.exec(`update auth.users set banned_until = null where id = '${B}'`);
+  });
+
+  await test('admin: ser administrador NÃO libera alterar perfis alheios direto na tabela', async () => {
+    await asUser(A);
+    const r = await db.query(`update public.executives set full_name = 'Outro Nome' where user_id = '${B}'`);
+    eq(r.affectedRows, 0);
+    const sel = await db.query(`select slug from public.executives`);
+    eq(sel.rows.length, 1, 'admin continua vendo só a própria linha na tabela');
+  });
+
+  await test('admin: excluir a conta remove o papel de administrador (cascade)', async () => {
+    await asAdmin();
+    await db.exec(`insert into auth.users (id, email) values ('55555555-5555-4555-8555-555555555555', 'x@example.test');
+      insert into public.panel_admins (user_id) values ('55555555-5555-4555-8555-555555555555');
+      delete from auth.users where id = '55555555-5555-4555-8555-555555555555';`);
+    eq((await db.query(`select count(*)::int n from public.panel_admins where user_id = '55555555-5555-4555-8555-555555555555'`)).rows[0].n, 0);
+  });
+
   await test('RLS ligada em public.executives e storage.objects', async () => {
     await asAdmin();
-    const r = await db.query(`select relname, relrowsecurity from pg_class where oid in ('public.executives'::regclass, 'storage.objects'::regclass) order by 1`);
-    eq(r.rows, [{ relname: 'executives', relrowsecurity: true }, { relname: 'objects', relrowsecurity: true }]);
+    const r = await db.query(`select relname, relrowsecurity from pg_class where oid in ('public.executives'::regclass, 'public.panel_admins'::regclass, 'storage.objects'::regclass) order by 1`);
+    eq(r.rows, [{ relname: 'executives', relrowsecurity: true }, { relname: 'objects', relrowsecurity: true }, { relname: 'panel_admins', relrowsecurity: true }]);
   });
 }
 

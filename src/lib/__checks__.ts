@@ -119,10 +119,11 @@ check('pendências ocultas ao cliente e visíveis na revisão', () => {
   for (const id of CHAPTER_ORDER) assert.equal(isChapterVisible(id, true), true, id);
 });
 
-check('sete frentes e ajustes autorizados do slide 9', () => {
-  assert.equal(fronts.length, 7);
-  assert.deepEqual(fronts.map((f) => f.number), ['01', '02', '03', '04', '05', '06', '07']);
-  assert.deepEqual(fronts.map((f) => f.id).slice(3, 6), ['tecnologia', 'dados-privacidade', 'inteligencia']);
+check('oito frentes e ajustes autorizados do slide 9', () => {
+  assert.equal(fronts.length, 8);
+  assert.deepEqual(fronts.map((f) => f.number), ['01', '02', '03', '04', '05', '06', '07', '08']);
+  assert.deepEqual(fronts.map((f) => f.id).slice(3, 7), ['tecnologia', 'cultura-dados', 'privacidade', 'inteligencia']);
+  assert.equal(fronts[3].title, 'Convergência Digital');
   assert.equal(fronts[0].title, 'Conformidade Legal e Jurídica');
   const inteligencia = fronts.find((f) => f.id === 'inteligencia')!;
   assert.ok(inteligencia.text.includes('Uma metodologia que constrói conhecimento de forma colaborativa.'));

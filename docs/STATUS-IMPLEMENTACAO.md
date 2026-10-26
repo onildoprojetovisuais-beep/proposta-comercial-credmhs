@@ -6,7 +6,9 @@ Leveza: menos traços, caixas, molduras e numeração. Detalhes em `qa/RELATORIO
 - Quem somos: sem os indicadores 35/MG/2008/2018; atributos em composição circular; fotos Barra e Centro mantidas.
 - Atuação integrada sem diagrama. Alcance sem rótulo superior; Rio rotulado “Rio de Janeiro - Barra e Centro”.
 - Transição sem foto, ênfase em “mais gestão”.
-- Frentes: sete (nova “Dados e Privacidade”, 05); textos 01–04 da Sabrina; sem “Como entregamos” e sem o bloco preto; “Comunicação e reputação” como fecho sem número (P49a).
+- Frentes: oito desde 23/10 (“Múltiplas frentes, uma atuação única.”; 04 Convergência Digital, 05 Cultura de Dados, 06 Privacidade e Segurança da Informação); textos 01–04 da Sabrina; sem “Como entregamos” e sem o bloco preto; “Comunicação e reputação” como fecho sem número, em faixa amarela de destaque (P49a).
+- Empresas (23/10): VIA Group e CSN retirados; entram Radix, CIMED, BMG, Orguel, Minalba, Hotel Nacional e Dom Atacadista. Seis marcas pedidas ainda sem arquivo (ver `docs/V3-LOGOS.md`).
+- Rodapé (23/10): logotipo de 170 px para 220–320 px.
 - Contato: texto flutuante, sem caixas/números; LinkedIn e site só com ícone.
 
 **Atualizado em:** 20/10/2026. **Estado:** V3 local implementada, integrada, revisada de forma independente e corrigida; rodada de sobriedade (referência) aplicada (ver `qa/RELATORIO.md`). Nada foi publicado. Supabase segue só simulado.

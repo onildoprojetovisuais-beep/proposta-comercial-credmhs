@@ -10,6 +10,9 @@ Passo a passo completo de configuração: [`docs/CONFIGURACAO-SUPABASE.md`](../d
 | `migrations/20261010120000_executives.sql` | Tabela `public.executives`, CHECKs, índice de perfil padrão único, triggers (trim/`updated_at`, slug imutável, `photo_path` na própria pasta), RLS, grants e RPC `public.get_public_executive`. |
 | `migrations/20261010120100_executive_photos_storage.sql` | Bucket público `executive-photos` (2 MB, `image/webp`/`image/jpeg`) e policies de `storage.objects` (cada usuário só mexe em `<auth.uid()>/...`). |
 | `migrations/20261010120200_seed_sabrina.sql` | Perfil padrão de Sabrina Ferreira (idempotente). |
+| `migrations/20261023120000_panel_admins.sql` | Administração da equipe: tabela `public.panel_admins`, `is_panel_admin()` e RPC `admin_list_executives()` (lista todos os perfis com a situação do acesso; recusa quem não é admin). |
+| `functions/painel-admin/index.ts` | Edge Function da aba **Equipe**: cadastra pessoa + convite por e-mail, convida perfil sem acesso, reenvia convite/link de senha, desativa/reativa (bloqueia o login). Só atende admins. |
+| `snippets/tornar-administrador.sql` | Dá (ou tira) acesso à aba Equipe. Usar uma vez para a primeira pessoa da CRED. |
 | `snippets/vincular-executivo.sql` | Liga a conta de login (`auth.users`) a um perfil, pelo e-mail. |
 | `snippets/criar-executivo.sql` | Modelo de novo perfil, com placeholders `<...>`. |
 | `snippets/desativar-executivo.sql` | Desativa/reativa um perfil. |
@@ -23,7 +26,8 @@ O contrato do frontend está em `src/lib/supabase/types.ts`; mudar coluna exige 
 
 - `anon` não lê a tabela; a página pública usa só a RPC `get_public_executive` (sem `id`, `user_id`, e-mail de login ou `created_at`).
 - `authenticated` lê e altera só a linha com `user_id = auth.uid()` e só as colunas de `EXECUTIVE_EDITABLE_COLUMNS`. Sem insert/delete.
-- `slug`, `user_id`, `is_active`, `is_default`, `linkedin_url` e `website_url` são administrados no SQL Editor.
+- `slug`, `user_id`, `is_active`, `is_default`, `linkedin_url` e `website_url` são administrados no SQL Editor ou, para cadastro/convite/ativação, pela aba **Equipe** do painel (Edge Function com service_role, só para quem está em `panel_admins`).
+- Ser administrador não amplia a RLS da tabela: o admin continua lendo e alterando direto só a própria linha; o resto passa pela RPC e pela Edge Function.
 - O slug é imutável para todos os papéis (trigger). Renomear quebra links já enviados; se for mesmo necessário:
 
   ```sql

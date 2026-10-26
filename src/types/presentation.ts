@@ -75,7 +75,7 @@ export interface Testimonial {
 export type DataStatus = 'provisorio' | 'validado';
 
 // ---------------------------------------------------------------------------
-// Seis frentes (slide 9)
+// Oito frentes (slide 9)
 // ---------------------------------------------------------------------------
 
 export type FrontId =
@@ -83,19 +83,20 @@ export type FrontId =
   | 'seguranca-operacional'
   | 'rede'
   | 'tecnologia'
-  | 'dados-privacidade'
+  | 'cultura-dados'
+  | 'privacidade'
   | 'inteligencia'
   | 'investimento';
 
 export interface Front {
   id: FrontId;
-  /** "01" … "07" (numeração do PPT). */
+  /** "01" … "08" (numeração do PPT). */
   number: string;
   title: string;
   text: string;
   /** Texto do PPT antes do ajuste (só documentação; nunca renderizar). */
   original: { title: string; text: string };
-  /** Ajuste autorizado aplicado (letra do pedido A–H). Só documentação. */
+  /** Ajuste autorizado aplicado (letra do pedido A–I). Só documentação. */
   adjustment?: string;
 }
 

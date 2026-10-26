@@ -100,3 +100,47 @@ ficam mais baixas, compactas mais altas); `optical` corrige o peso:
    coincidência de paginação — não é a paginação do PPT.)
 3. Autorização de uso das marcas como referência comercial: não verificada por este agente
    (responsabilidade da CRED).
+
+## Rodada 23/10
+
+Pedido: retirar VIA Group e CSN (arquivos removidos de `public/media/clientes/`) e incluir FFA, Grupo
+Ombrello, Radix, CIMED, Trigo, BMG, Cimento Nacional, Orguel, Minalba, Rede Manaus, Hotel Nacional,
+Hotel Santa Teresa e Dom Atacadista, a partir de `assets/clients/` (JPEGs do WhatsApp, 22/10).
+
+| Marca | Arquivo de origem | Tratamento | Final | optical |
+|---|---|---|---|---|
+| Radix | `… 19.46.09 (11).jpeg` (200×101) | sem corte útil | `radix.png` 200×101 | 0,95 |
+| CIMED | `… 19.46.09.jpeg` (257×141) | nenhum (o bloco amarelo é a marca) | `cimed.png` | 0,92 |
+| BMG | `… (6).jpeg` (300×168, fundo cinza-claro) | fundo cinza → branco (preenchimento a partir dos cantos), trim | `bmg.png` 153×88 | 0,95 |
+| Orguel | `… (4).jpeg` (1248×370, fundo cinza-claro) | fundo → branco, trim | `orguel.png` 1048×194 | 0,95 |
+| Minalba | `… (12).jpeg` (300×168) | trim | `minalba.png` 150×50 | 1,05 — **baixa resolução**, macia em retina |
+| Hotel Nacional | `… (1).jpeg` (225×225, “HN”) | trim | `hotel-nacional.png` 185×144 | 0,82 — **confirmar** que “HN” é a marca do Hotel Nacional |
+| Dom Atacadista | `… (2).jpeg` (225×225) | nenhum (bloco azul é a marca) | `dom-atacadista.png` | 0,85 |
+
+Ordem: as 7 marcas mantidas do PPT + Fairmont, depois as novas na ordem do pedido. Total: 15.
+Processamento: `scratchpad/logos/process-2310.py` (sessão de 23/10; fora do projeto). Nenhum logo baixado da internet.
+
+**Pendente em 23/10 (resolvido em 26/10, ver abaixo) — pedidas, sem arquivo:** FFA, Grupo Ombrello, Trigo, Cimento
+Nacional, Rede Manaus, Hotel Santa Teresa.
+
+**Na pasta, mas fora do pedido (não publicadas):** Somov, Nacional Gás (não é Cimento Nacional),
+Art-Latex, Radisson, Hotel Laghetto Stilo, Hyatt Place Macaé.
+
+## Rodada 26/10 — marcas que faltavam
+
+Arquivos novos em `assets/clients/` (26/10). Processamento: `scratchpad/logos26/process-2610.py`
+(sessão de 26/10; fora do projeto). Ordem na página: as 7 do PPT + Fairmont, depois as 13 do pedido,
+na ordem em que foram pedidas. Total: **20**.
+
+| Marca | Arquivo de origem | Tratamento | Final | optical |
+|---|---|---|---|---|
+| FFA (Ferrareze & Freitas Advogados) | `LOGO FFA.pdf` (vetorial) | renderizado a 200 dpi, trim, reduzido a 800 px | `ffa.png` 800×436 | 1,1 |
+| Grupo Ombrello | `Ombrello.jpeg` (371×64) | fundo cinza-claro → branco | `grupo-ombrello.png` 371×64 | 0,9 — **símbolo e “O” final parecem cortados na borda do arquivo; pedir versão completa** |
+| Trigo | `trigo .jpeg` (637×349) | barra escura da borda esquerda retirada, trim | `trigo.png` 509×117 | 1 |
+| Cimento Nacional | `cimento nacional.jpeg` (616×409) | trim | `cimento-nacional.png` 579×311 | 1 |
+| Rede Manaus | `rede manaus.jpeg` (627×396) | trim | `rede-manaus.png` 552×211 | 0,85 |
+| Hotel Nacional | `HN - Hotel Nacional.jpeg` (349×137) | trim; **substitui** o “HN” isolado de 23/10 (pendência de confirmação resolvida) | `hotel-nacional.png` 349×137 | 1,05 |
+| Hotel Santa Teresa | `hotel santa teresa.jpeg` (1600×1130) | fundo cinza-claro → branco, trim, reduzido a 800 px | `hotel-santa-teresa.png` 800×583 | 1,25 |
+
+Pedido de 23/10 completo: as 13 marcas estão publicadas. Segue pendente só a Minalba em baixa resolução
+e o arquivo completo do Ombrello.

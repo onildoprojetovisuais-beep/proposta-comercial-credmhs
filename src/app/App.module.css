@@ -17,7 +17,8 @@
 }
 
 .logo {
-  width: 170px;
+  /* Rodapé (23/10): maior, para a assinatura “Saúde e Segurança do Trabalho” ficar legível. */
+  width: clamp(220px, 160px + 10vw, 320px);
   height: auto;
   margin-right: auto;
 }
