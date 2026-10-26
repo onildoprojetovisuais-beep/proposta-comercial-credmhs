@@ -95,6 +95,14 @@ trilha 1440 (etapa 2, pausada, final, reduced motion), 768, 390 (etapa 3, reduce
 - Desempenho em máquina lenta (o chunk do player tem ~93 kB gzip; carrega só a ~800 px da trilha).
 - Licença do Remotion para uso comercial (P45). Transcrição de 13/10 (P43) e a revisão visual citada (P44).
 
+## Rodada 2026-10-26 — Delina Sampaio e Milena Andrade (perfis locais)
+
+**Implementado:** perfis locais `delina-sampaio` e `milena-andrade` em `src/content/executives.ts` (dados enviados por Nil em 26/10; cargo “Executiva Comercial”; WhatsApp liberado para as duas com o número do telefone). Retratos derivados em `public/media/executives/` (`-640` e tamanho original, avif/webp/jpg); Delina recortada de 880×1223 para 800×1044. `portraitSources` (shared.tsx) passou a valer para qualquer perfil local, usando `photoWidth`.
+
+**Testado:** Playwright em 1440 e 390 px com `?executivo=delina-sampaio` e `?executivo=milena-andrade`: abertura com foto, nome e cargo; contato com `tel:`, `mailto:` e `wa.me` corretos; sem erro de página. `tsc` ok; `__checks__.ts` 18/18.
+
+**Atenção:** sem Supabase (situação atual, local e produção). Ao ligar o Supabase, cadastrar as duas lá com os mesmos slugs, ou os links delas passam a mostrar “não encontrada”.
+
 ## Rodada 2026-10-26 — faixa “Comunicação e reputação” e marcas
 
 **Implementado:** título da faixa amarela ampliado (desktop: título à esquerda, frase à direita; celular: empilhado); 6 marcas que faltavam (FFA, Grupo Ombrello, Trigo, Cimento Nacional, Rede Manaus, Hotel Santa Teresa) e logo completo do Hotel Nacional — 20 marcas, detalhes em `docs/V3-LOGOS.md`.

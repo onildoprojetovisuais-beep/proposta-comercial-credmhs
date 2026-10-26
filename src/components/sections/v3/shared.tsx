@@ -13,15 +13,15 @@ import { typeset as baseTypeset, typesetLabel } from '../../../lib/typeset';
 /**
  * Fontes otimizadas do retrato do projeto (`photoSource: 'bundled'`), derivadas do caminho do
  * perfil. Foto do Supabase (`remote`) já chega otimizada pelo painel: um único arquivo.
+ * Derivados em public/media/executives/: `<id>-640` (avif/webp) e `<id>-<photoWidth>`
+ * (avif/webp/jpg), para todo perfil local de src/content/executives.ts.
  */
-function portraitSources(photo: string) {
+function portraitSources(photo: string, width: number) {
   const base = photo.replace(/\.(png|jpe?g|webp|avif)$/i, '');
-  // Só o perfil documentado tem derivados gerados (public/media/executives/*-640/-1098).
-  if (!base.endsWith('/sabrina-ferreira')) return null;
   return {
-    avif: `${base}-640.avif 640w, ${base}-1098.avif 1098w`,
-    webp: `${base}-640.webp 640w, ${base}-1098.webp 1098w`,
-    fallback: `${base}-1098.jpg`,
+    avif: `${base}-640.avif 640w, ${base}-${width}.avif ${width}w`,
+    webp: `${base}-640.webp 640w, ${base}-${width}.webp ${width}w`,
+    fallback: `${base}-${width}.jpg`,
   };
 }
 
@@ -47,7 +47,7 @@ export function Portrait({ executive, sizes, className, priority, alt, onMissing
   }, [photo, onMissing]);
 
   if (!photo) return null;
-  const sources = executive.photoSource === 'bundled' ? portraitSources(photo) : null;
+  const sources = executive.photoSource === 'bundled' ? portraitSources(photo, executive.photoWidth ?? 1098) : null;
   return (
     <picture>
       {sources ? <source type="image/avif" srcSet={sources.avif} sizes={sizes} /> : null}
