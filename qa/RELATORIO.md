@@ -97,7 +97,7 @@ trilha 1440 (etapa 2, pausada, final, reduced motion), 768, 390 (etapa 3, reduce
 
 ## Rodada 2026-10-26 — Delina Sampaio e Milena Andrade (perfis locais)
 
-**Implementado:** perfis locais `delina-sampaio` e `milena-andrade` em `src/content/executives.ts` (dados enviados por Nil em 26/10; cargo “Executiva Comercial”; WhatsApp liberado para as duas com o número do telefone). Retratos derivados em `public/media/executives/` (`-640` e tamanho original, avif/webp/jpg); Delina recortada de 880×1223 para 800×1044. `portraitSources` (shared.tsx) passou a valer para qualquer perfil local, usando `photoWidth`.
+**Implementado:** perfis locais `delina-sampaio` e `milena-andrade` em `src/content/executives.ts` (dados enviados por Nil em 26/10; cargo “Executiva Comercial”; WhatsApp liberado para as duas com o número do telefone). Retratos derivados em `public/media/executives/` (`-640` e tamanho original, avif/webp/jpg); Delina: retrato substituído no mesmo dia pela versão tratada por Nil (1064×1478), recortada do busto para cima (780×1018). `portraitSources` (shared.tsx) passou a valer para qualquer perfil local, usando `photoWidth`.
 
 **Testado:** Playwright em 1440 e 390 px com `?executivo=delina-sampaio` e `?executivo=milena-andrade`: abertura com foto, nome e cargo; contato com `tel:`, `mailto:` e `wa.me` corretos; sem erro de página. `tsc` ok; `__checks__.ts` 18/18.
 

@@ -36,7 +36,8 @@ export const sabrinaFerreira: Executive = {
   verificationStatus: 'source-supplied',
 };
 
-/** Fotos: assets/executives/Delina-sampaio (880 × 1223, recortada para 800 × 1044). */
+/** Foto: assets/executives/Delina-sampaio, retrato tratado por Nil em 26/10 (1064 × 1478),
+ * recortado do busto para cima (780 × 1018). */
 export const delinaSampaio: Executive = {
   id: 'delina-sampaio',
   firstName: 'Delina',
@@ -45,8 +46,8 @@ export const delinaSampaio: Executive = {
   photo: '/media/executives/delina-sampaio.jpg',
   photoSource: 'bundled',
   photoAlt: 'Retrato de Delina Sampaio, Executiva Comercial da CRED MHS',
-  photoWidth: 800,
-  photoHeight: 1044,
+  photoWidth: 780,
+  photoHeight: 1018,
   email: 'comercial.rio@credmhs.com.br',
   phoneDisplay: '+55 (21) 99943-5149',
   phoneE164: '+5521999435149',
